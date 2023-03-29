@@ -11,4 +11,3 @@ public class QLyTourDuLich {
         System.out.println("chào");
     }
 }
-djt me m 
