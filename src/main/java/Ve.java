@@ -1,6 +1,3 @@
-package com.mycompany.qlytourdulich;
-
-
 
 import java.util.Date;
 import java.util.Scanner;
@@ -13,10 +10,7 @@ public class Ve {
     
     public Ve(Ve x)
     {
-        mave = x.mave;
-        ngaytaove = x.ngaytaove;
-        hansudung = x.hansudung;
-        giavegiamgia = x.giavegiamgia;
+        
     }
 
     public Ve(String mave, Date ngaytaove, Date hansudung, long giavegiamgia) {
