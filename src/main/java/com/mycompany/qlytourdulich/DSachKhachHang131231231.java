@@ -20,7 +20,7 @@ class DSachKhachHang131231231 extends KhachHang {
     public DSachKhachHang131231231() {
     }
 
-    @Override
+
     public void nhap() {
         Scanner sc = new Scanner(System.in);
 //nhập n từ bàn phím dùng scanner 
@@ -39,7 +39,7 @@ class DSachKhachHang131231231 extends KhachHang {
 
     }
 
-    @Override
+
     public void xuat() {
 
         for (int i = 0; i < n; i++) {
