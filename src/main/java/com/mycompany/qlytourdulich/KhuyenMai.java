@@ -1,4 +1,6 @@
 package com.mycompany.qlytourdulich;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 import java.util.Scanner;
@@ -8,6 +10,7 @@ public class KhuyenMai {
     private Date ngaykm;
     private Date hansudung;
     private long tiengiam;
+    
 
     public KhuyenMai(String makm, String tenkm, Date ngaykm, Date hansudung, long tiengiam) {
         this.makm = makm;
@@ -114,20 +117,26 @@ public class KhuyenMai {
     
    
     
-    public void nhap()
-    {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap ma khuyen mai: ");
-        makm = sc.nextLine();
-        System.out.println("Nhap ten khuyen mai: ");
-        tenkm = sc.nextLine();
-        Date date1 = new Date();
-        System.out.println("Nhap ngay khuyen mai: "+date1);
-        Date date2 = new Date();
-        System.out.println("Nhap han su dung: "+date2);
-        System.out.println("Nhap tien giam: ");
-        tiengiam = sc.nextLong();
+    public void nhap() {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Nhap ma khuyen mai: ");
+    makm = sc.nextLine();
+    System.out.println("Nhap ten khuyen mai: ");
+    tenkm = sc.nextLine();
+
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    try {
+        System.out.println("Nhap ngay khuyen mai (dd/MM/yyyy): ");
+        ngaykm = sdf.parse(sc.nextLine());
+        System.out.println("Nhap han su dung (dd/MM/yyyy): ");
+        hansudung = sdf.parse(sc.nextLine());
+    } catch (ParseException ex) {
+        System.out.println("Nhap sai dinh dang ngay thang");
     }
+
+    System.out.println("Nhap tien giam: ");
+    tiengiam = sc.nextLong();
+}
     
     public void xuat()
     {

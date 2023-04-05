@@ -1,3 +1,5 @@
+package com.mycompany.qlytourdulich;
+
 
 import java.util.Objects;
 import java.util.Scanner;
