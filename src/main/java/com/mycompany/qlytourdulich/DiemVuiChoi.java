@@ -15,6 +15,10 @@ public class DiemVuiChoi {
         this.cacdiadiemthuoctour = cacdiadiemthuoctour;
     }
 
+    DiemVuiChoi() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public String getMaddvc() {
         return maddvc;
     }
@@ -83,6 +87,12 @@ public class DiemVuiChoi {
         tenddvc = sc.nextLine();
         System.out.println("Cac dia diem thuoc tour: ");
         cacdiadiemthuoctour = sc.nextLine(); 
+    }
+
+    void xuat() {
+        System.out.println("Dia diem vui choi la: "+this.maddvc);
+        System.out.println("Ten dia diem vui choi: "+this.tenddvc);
+        System.out.println("Thuoc dia diem tour: "+this.cacdiadiemthuoctour);
     }
 }
     

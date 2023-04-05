@@ -1,8 +1,16 @@
 package com.mycompany.qlytourdulich;
 
+import java.text.SimpleDateFormat;
+
 public class Main {
     public static void main(String[] args) {
-        PhuongTien pt = new PhuongTien("PT001", "Xe khách", "29H-12345", 45, 30);
-        pt.xuat();
+        ChiTietHoaDonVe cthdv = new ChiTietHoaDonVe(100,1000);
+        cthdv.xuat();
+        DiaDiem dd = new DiaDiem("DD001","150","Cao Bang");
+        dd.xuat();
+        DiemVuiChoi dvc = new DiemVuiChoi("DDVC001","Dong Thap","Dong Thap");
+        dvc.xuat();
+        HoaDon hd = new HoaDon("ds","đá",2000,"20/09/2003");
+        hd.xuat();
     }
 }
