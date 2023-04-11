@@ -1,3 +1,0 @@
-class DanhSachKhachHang extends KhachHang{
-    
-}

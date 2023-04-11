@@ -24,6 +24,16 @@ public class KhachHang {
         sdt = x.sdt;
     }
 
+    public KhachHang(String makh, String tenkh, String diachi, long sdt, String email) {
+        this.makh = makh;
+        this.tenkh = tenkh;
+        this.diachi = diachi;
+        this.sdt = sdt;
+        this.email = email;
+    }
+
+    
+
     public String getMakh() {
         return makh;
     }
