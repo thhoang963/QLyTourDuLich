@@ -18,8 +18,7 @@ public class test {
                                5. Lam rong danh sach khach hang 
                                6. Kiem tra khach hang co ton tai trong danh sach hay khong, dua tren ma khach hang
                                7. Xoa mot khach hang ra khoi danh sach dua tren ma khach hang
-                               8. Tim kiem tat ca khach hang dua tren ten nhap tu ban phim 
-                               9. Xuat ra danh sach khach hang theo ma khach hang
+                               8. Tim kiem tat ca khach hang dua tren ma nhap tu ban phim 
                                0. Thoat khoi chuong trinh
                                Vui long chon chuc nang: """);
             luaChon = sc.nextInt();
