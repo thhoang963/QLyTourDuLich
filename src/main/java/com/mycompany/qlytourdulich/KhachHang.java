@@ -4,7 +4,7 @@ package com.mycompany.qlytourdulich;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class KhachHang {
+public class KhachHang implements Comparable<KhachHang>{
     private String makh;
     private String tenkh;
     private String diachi;
@@ -30,6 +30,10 @@ public class KhachHang {
         this.diachi = diachi;
         this.sdt = sdt;
         this.email = email;
+    }
+
+    KhachHang(String maKhachHang) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     
@@ -90,6 +94,7 @@ public class KhachHang {
         return hash;
     }
     
+    @Override
     public int compareTo(KhachHang o) {
         return this.makh.compareTo(o.makh);
     }
