@@ -4,6 +4,7 @@ import KetnoiSQL_DAL.config;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.zip.DataFormatException;
 
@@ -17,6 +18,13 @@ public class Main {
 //        DiemVuiChoi dvc = new DiemVuiChoi("DDVC001","Dong Thap","Dong Thap");
 //        dvc.xuat();
           config a = new config();
-          a.layDL_TK();
+
+          ArrayList<TaiKhoan> danhSachTaiKhoan = new ArrayList<>();
+          danhSachTaiKhoan=a.layDL_TK();
+          for (TaiKhoan khachHang : danhSachTaiKhoan) 
+        {
+            System.out.println(khachHang);
+        }
+          
     }
 }
