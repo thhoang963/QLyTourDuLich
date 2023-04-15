@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        DanhSachKhachHang dskh = new DanhSachKhachHang();
+        KhachHang dskh = new KhachHang();
         int luaChon = 0;
         do {            
             System.out.println("-----MENU----- ");
