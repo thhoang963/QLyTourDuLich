@@ -1,4 +1,4 @@
-package com.mycompany.qlytourdulich;
+package DTo;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

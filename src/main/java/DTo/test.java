@@ -1,5 +1,5 @@
 
-package com.mycompany.qlytourdulich;
+package DTo;
 
 import java.util.Scanner;
 

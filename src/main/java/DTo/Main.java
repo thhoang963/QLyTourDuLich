@@ -1,5 +1,6 @@
-package com.mycompany.qlytourdulich;
+package DTo;
 
+import KetnoiSQL_DAL.config;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
