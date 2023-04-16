@@ -149,6 +149,7 @@ public class KhachHang implements Comparable<KhachHang>{
         System.out.println("So dien thoai la: "+this.makh);
         System.out.println("Email la: "+this.makh);
     }
+    
     private ArrayList<KhachHang>danhSach;
 
     public KhachHang()
