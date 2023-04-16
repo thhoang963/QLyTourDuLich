@@ -1,5 +1,6 @@
 package DTo;
 
+import GiaodienUI.login;
 import KetnoiSQL_DAL.config;
 import java.sql.SQLException;
 import java.text.ParseException;
@@ -7,6 +8,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.zip.DataFormatException;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Main {
     public static void main(String[] args) throws ParseException, SQLException {
@@ -17,14 +20,8 @@ public class Main {
 //        dd.xuat();
 //        DiemVuiChoi dvc = new DiemVuiChoi("DDVC001","Dong Thap","Dong Thap");
 //        dvc.xuat();
-          config a = new config();
-
-          ArrayList<TaiKhoan> danhSachTaiKhoan = new ArrayList<>();
-          danhSachTaiKhoan=a.layDL_TK();
-          for (TaiKhoan khachHang : danhSachTaiKhoan) 
-        {
-            System.out.println(khachHang);
-        }
-          
+          JFrame frame = new JFrame();
+          login login = new login();
+          login.setVisible(true);
     }
 }

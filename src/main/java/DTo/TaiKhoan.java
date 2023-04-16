@@ -19,6 +19,11 @@ public class TaiKhoan {
         this.quyentruycap = quyentruycap;
     }
 
+    TaiKhoan(String matk, String matkhau) {
+        this.matk = matk;
+        this.matkhau = matkhau;
+       }
+
     public String getMatk() {
         return matk;
     }
