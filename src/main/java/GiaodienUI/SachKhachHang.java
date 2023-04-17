@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package DTo;
+package GiaodienUI;
 
 /**
  *
- * @author LENOVO
+ * @author Thanh Tran
  */
 public class SachKhachHang extends javax.swing.JFrame {
 
