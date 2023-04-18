@@ -20,9 +20,9 @@ public class Main {
 //        dvc.xuat();
           config a = new config();
 
-          ArrayList<TaiKhoan> danhSachTaiKhoan = new ArrayList<>();
+          ArrayList<Account> danhSachTaiKhoan = new ArrayList<>();
           danhSachTaiKhoan=a.layDL_TK();
-          for (TaiKhoan khachHang : danhSachTaiKhoan) 
+          for (Account khachHang : danhSachTaiKhoan) 
         {
             System.out.println(khachHang);
         }

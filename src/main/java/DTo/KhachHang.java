@@ -83,13 +83,7 @@ public class KhachHang implements Comparable<KhachHang>{
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 41 * hash + Objects.hashCode(this.makh);
-        hash = 41 * hash + Objects.hashCode(this.tenkh);
-        hash = 41 * hash + Objects.hashCode(this.diachi);
-        hash = 41 * hash + (int) (this.sdt ^ (this.sdt >>> 32));
-        hash = 41 * hash + Objects.hashCode(this.email);
-        return hash;
+        return Objects.hash(makh,tenkh,diachi,sdt,email);
     }
     
     @Override
@@ -108,20 +102,8 @@ public class KhachHang implements Comparable<KhachHang>{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final KhachHang other = (KhachHang) obj;
-        if (this.sdt != other.sdt) {
-            return false;
-        }
-        if (!Objects.equals(this.makh, other.makh)) {
-            return false;
-        }
-        if (!Objects.equals(this.tenkh, other.tenkh)) {
-            return false;
-        }
-        if (!Objects.equals(this.diachi, other.diachi)) {
-            return false;
-        }
-        return Objects.equals(this.email, other.email);
+        KhachHang other = (KhachHang) obj;
+        return Objects.equals(makh, other.makh);
     }
     
     

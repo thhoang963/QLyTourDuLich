@@ -4,7 +4,7 @@
  */
 package KetnoiSQL_DAL;
 
-import DTo.TaiKhoan;
+import DTo.Account;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -29,7 +29,7 @@ public class config {
         }
     }
 
-    public ArrayList<TaiKhoan> layDL_TK() throws SQLException {
+    public ArrayList<Account> layDL_TK() throws SQLException {
         // Khởi tạo kết nối đến cơ sở dữ liệu
         Connection con = DriverManager.getConnection(url, user, password);
 
@@ -37,10 +37,10 @@ public class config {
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT * FROM taikhoan");
         
-        ArrayList<TaiKhoan> danhSachTaiKhoan = new ArrayList<>();
+        ArrayList<Account> danhSachTaiKhoan = new ArrayList<>();
         
         while (rs.next()) {            
-            TaiKhoan taikhoan = new TaiKhoan();
+            Account taikhoan = new Account();
             taikhoan.setMatk(rs.getString("tentaikhoan"));
             taikhoan.setMatkhau(rs.getString("matkhau"));
             taikhoan.setManv(rs.getInt("manv"));

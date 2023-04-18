@@ -8,8 +8,8 @@ public class ModuleXuLy {
     config setup = new config();
     public boolean login(String matk, String matkhau,int manv, String loaitk) throws SQLException
     {
-        ArrayList<TaiKhoan> danhSachTaiKhoan = setup.layDL_TK();
-        TaiKhoan input = new TaiKhoan(matk,matkhau,manv,loaitk);
+        ArrayList<Account> danhSachTaiKhoan = setup.layDL_TK();
+        Account input = new Account(matk,matkhau,manv,loaitk);
         for (int i = 0; i < danhSachTaiKhoan.size(); i++) {
             if (danhSachTaiKhoan.get(i).equals(input)== true) {
                 return true;
