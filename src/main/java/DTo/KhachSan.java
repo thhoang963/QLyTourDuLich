@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class KhachSan {
+public class KhachSan implements Comparable<KhachSan>{
     private String maks;
     private String tenks;
     private int tienks;
@@ -73,6 +73,11 @@ public class KhachSan {
         hash = 29 * hash + this.tienks;
         hash = 29 * hash + Objects.hashCode(this.sdt);
         return hash;
+    }
+    
+    @Override
+    public int compareTo(KhachSan o) {
+        return this.maks.compareTo(o.maks);
     }
 
     @Override

@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 
-public class PhuongTien {
+public class PhuongTien implements Comparable<PhuongTien>{
     private String mapt;
     private String loaipt;
     private String bienso;
@@ -86,6 +86,11 @@ public class PhuongTien {
         hash = 29 * hash + (int) (this.tongsocho ^ (this.tongsocho >>> 32));
         hash = 29 * hash + (int) (this.sochocondu ^ (this.sochocondu >>> 32));
         return hash;
+    }
+    
+    @Override
+    public int compareTo(PhuongTien o) {
+        return this.mapt.compareTo(o.mapt);
     }
 
     @Override

@@ -57,20 +57,20 @@ public class test3 {
             }else if(luaChon == 6)
             {
                 //6. Kiem tra phuong tien co ton tai trong danh sach hay khong, dua tren ma phuong tien
-                System.out.println("Nhap ma khach hang: ");  String maphuongtien = sc.nextLine();
+                System.out.println("Nhap ma phuong tien: ");  String maphuongtien = sc.nextLine();
                 PhuongTien pt = new PhuongTien(maphuongtien);
-                System.out.println("Kiem tra khach hang co trong danh sach: "+dspt.kiemTraTonTai(pt));
+                System.out.println("Kiem tra phuong tien co trong danh sach: "+dspt.kiemTraTonTai(pt));
                 
             }else if(luaChon == 7)
             {
                 //7.  Xoa mot phuong tien ra khoi danh sach dua tren ma phuong tien
-                System.out.println("Nhap ma khach hang: ");  String maphuongtien= sc.nextLine();
+                System.out.println("Nhap ma phuong tien: ");  String maphuongtien= sc.nextLine();
                 PhuongTien pt = new PhuongTien(maphuongtien);
-                System.out.println("Xoa khach hang trong danh sach: "+dspt.xoaPhuongTien(pt));
+                System.out.println("Xoa phuong tien trong danh sach: "+dspt.xoaPhuongTien(pt));
             }else if(luaChon == 8)
             {
                 //8. Tim kiem tat ca phuong tien dua tren Ma phuong tien duoc nhap tu ban phim
-                System.out.println("Nhap ma khach hang: "); String maphuongtien = sc.nextLine();
+                System.out.println("Nhap ma phuong tien: "); String maphuongtien = sc.nextLine();
                 System.out.println("Ket qua tim kiem: ");
                 dspt.timPhuongTien(maphuongtien);
             } 
