@@ -149,7 +149,7 @@ public class KhachHang implements Comparable<KhachHang>{
         this.danhSach.add(kh);    
     }
     
-    //2. Them In danh sach sinh vien ra man hinh
+    //2. Them In danh sach khach hang ra man hinh
     public void inDanhSachKhachHang()
     {
         for (KhachHang khachHang : danhSach) 
@@ -169,7 +169,7 @@ public class KhachHang implements Comparable<KhachHang>{
     {
         return this.danhSach.size();
     }
-    //5. lam romg danh sach khach hang
+    //5. lam rong danh sach khach hang
     public void lamRongDanhSach()
     {
         this.danhSach.removeAll(danhSach);
