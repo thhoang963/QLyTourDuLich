@@ -126,10 +126,10 @@ public class KhachHang implements Comparable<KhachHang>{
     public void xuat()
     {
         System.out.println("Ma khach hang la: "+this.makh);
-        System.out.println("Ten khach hang la: "+this.makh);
-        System.out.println("Dia chi la: "+this.makh);
-        System.out.println("So dien thoai la: "+this.makh);
-        System.out.println("Email la: "+this.makh);
+        System.out.println("Ten khach hang la: "+this.tenkh);
+        System.out.println("Dia chi la: "+this.diachi);
+        System.out.println("So dien thoai la: "+this.sdt);
+        System.out.println("Email la: "+this.email);
     }
     
     private ArrayList<KhachHang>danhSach;
