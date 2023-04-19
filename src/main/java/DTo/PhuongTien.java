@@ -11,6 +11,14 @@ public class PhuongTien {
     private String bienso;
     private long tongsocho;
     private long sochocondu;
+    
+    public PhuongTien(PhuongTien x){
+        mapt = x.mapt;
+        loaipt = x.loaipt;
+        bienso = x.bienso;
+        tongsocho = x.tongsocho;
+        sochocondu = x.sochocondu;
+    }
 
     public PhuongTien(String mapt, String loaipt, String bienso, long tongsocho, long sochocondu) {
         this.mapt = mapt;
@@ -19,11 +27,11 @@ public class PhuongTien {
         this.tongsocho = tongsocho;
         this.sochocondu = sochocondu;
     }
-    
-    PhuongTien (String maPhuongTien){
-        this.mapt = maPhuongTien;
-    }
 
+    public PhuongTien(String mapt) {
+        this.mapt = mapt;
+    }
+    
     public String getMapt() {
         return mapt;
     }
@@ -98,13 +106,13 @@ public class PhuongTien {
         if (this.sochocondu != other.sochocondu) {
             return false;
         }
-        if (!Objects.equals(this.mapt, other.mapt)) {
+        if (!Objects.equals(this.bienso, other.bienso)) {
             return false;
         }
         if (!Objects.equals(this.loaipt, other.loaipt)) {
             return false;
         }
-        return Objects.equals(this.bienso, other.bienso);
+        return Objects.equals(this.mapt, other.mapt);
     }
     
     public void nhap()
