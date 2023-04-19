@@ -77,12 +77,12 @@ public class QuanLyKhachSan extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setText("  Địa Điểm Tour");
+        jLabel1.setText("      Địa Điểm Tour");
         jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setText("  Tên Khách Sạn ");
+        jLabel2.setText("      Tên Khách Sạn ");
         jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -96,21 +96,21 @@ public class QuanLyKhachSan extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel4.setText("  Số Điện Thoại");
+        jLabel4.setText("      Số Điện Thoại");
         jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("  Tiền Khách Sạn");
+        jLabel5.setText("     Tiền Khách Sạn");
         jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel6.setText("   Tiền Phòng");
+        jLabel6.setText("    Tiền Phòng");
         jLabel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jTextField3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
