@@ -19,6 +19,10 @@ public class PhuongTien {
         this.tongsocho = tongsocho;
         this.sochocondu = sochocondu;
     }
+    
+    PhuongTien (String maPhuongTien){
+        this.mapt = maPhuongTien;
+    }
 
     public String getMapt() {
         return mapt;
@@ -127,27 +131,27 @@ public class PhuongTien {
         System.out.println("So cho con du la: "+this.sochocondu);
     }
     
-    private ArrayList<PhuongTien>danhSach;
+    private ArrayList<PhuongTien>danhSachPT;
 
     public PhuongTien()
     {
-        this.danhSach = new ArrayList<PhuongTien>(); //cach khai bao 1 arrayList
+        this.danhSachPT = new ArrayList<PhuongTien>(); //cach khai bao 1 arrayList
     }
     
-    public PhuongTien(ArrayList<PhuongTien> danhSach) {
-        this.danhSach = danhSach;
+    public PhuongTien(ArrayList<PhuongTien> danhSachPT) {
+        this.danhSachPT = danhSachPT;
     }
     
     //1. Them phuong tien vao danh sach 
     public void themPhuongTien(PhuongTien pt)
     {
-        this.danhSach.add(pt);    
+        this.danhSachPT.add(pt);    
     }
     
     //2. Them In danh sach phuong tien ra man hinh
     public void inDanhSachPhuongTien()
     {
-        for (PhuongTien phuongTien : danhSach) 
+        for (PhuongTien phuongTien : danhSachPT) 
         {
             System.out.println(phuongTien);
         }
@@ -156,35 +160,35 @@ public class PhuongTien {
     //3. Kiem tra danh sach phuong tien co rong hay khong
     public boolean kiemTraDanhSachRong()
     {
-        return this.danhSach.isEmpty();
+        return this.danhSachPT.isEmpty();
     }
     
     //4. Lay ra so luong phuong tien trong danh sach
     public int laySoLuongPhuongTien()
     {
-        return this.danhSach.size();
+        return this.danhSachPT.size();
     }
     //5. lam rong danh sach phuong tien
     public void lamRongDanhSach()
     {
-        this.danhSach.removeAll(danhSach);
+        this.danhSachPT.removeAll(danhSachPT);
     }
     
     //6. Kiem tra phuong tien co ton tai trong danh sach hay khong, dua tren ma phuong tien
     public boolean kiemTraTonTai(PhuongTien pt)
     {
-        return this.danhSach.contains(pt);
+        return this.danhSachPT.contains(pt);
     }
     //7. Xoa mot phuong tien ra khoi danh sach phuong tien dua tren ma phuong tien 
     public boolean  xoaPhuongTien(PhuongTien pt)
     {
-        return this.danhSach.remove(pt);
+        return this.danhSachPT.remove(pt);
     }
     
     //8. Tim kiem tat ca phuong tien dua tren Ma phuong tien duoc nhap tu ban phim
     public void timPhuongTien(String ma)
     {
-        for (PhuongTien phuongTien : danhSach) 
+        for (PhuongTien phuongTien : danhSachPT) 
         {
             if(phuongTien.getMapt().contains(ma));
             System.out.println(phuongTien);
