@@ -48,6 +48,7 @@ public class QuanLyDiaDiemVuiChoi extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -82,10 +83,12 @@ public class QuanLyDiaDiemVuiChoi extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
+        jPanel2.setBackground(new java.awt.Color(255, 204, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 0, 0));
         jLabel3.setText(" Địa Điểm Tour");
@@ -93,24 +96,24 @@ public class QuanLyDiaDiemVuiChoi extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
         jLabel4.setText("  Tên Địa Điểm");
         jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
         jLabel5.setText("   Mã Địa Điểm");
         jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -147,7 +150,7 @@ public class QuanLyDiaDiemVuiChoi extends javax.swing.JFrame {
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Tìm Kiếm");
 
-        jSeparator2.setForeground(new java.awt.Color(153, 153, 153));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -207,8 +210,10 @@ public class QuanLyDiaDiemVuiChoi extends javax.swing.JFrame {
                 .addGap(14, 14, 14))
         );
 
-        jSeparator3.setForeground(new java.awt.Color(153, 153, 153));
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
 
+        jTable1.setAutoCreateRowSorter(true);
+        jTable1.setBackground(new java.awt.Color(204, 204, 204));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -257,7 +262,7 @@ public class QuanLyDiaDiemVuiChoi extends javax.swing.JFrame {
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
+                .addGap(31, 31, 31))
         );
 
         pack();
