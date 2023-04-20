@@ -21,20 +21,20 @@ public class Main {
 //        dd.xuat();
 //        DiemVuiChoi dvc = new DiemVuiChoi("DDVC001","Dong Thap","Dong Thap");
 //        dvc.xuat();
-<<<<<<< HEAD
+
           config a = new config();
 
-          ArrayList<Account> danhSachTaiKhoan = new ArrayList<>();
+          ArrayList<TaiKhoan> danhSachTaiKhoan = new ArrayList<>();
           danhSachTaiKhoan=a.layDL_TK();
-          for (Account khachHang : danhSachTaiKhoan) 
+          for (TaiKhoan khachHang : danhSachTaiKhoan) 
         {
             System.out.println(khachHang);
         }
           
-=======
+
           JFrame frame = new JFrame();
           login login = new login();
           login.setVisible(true);
->>>>>>> fef9298cc37feb9ec4bf71f6abaa6dd3819e0e58
+
     }
 }
