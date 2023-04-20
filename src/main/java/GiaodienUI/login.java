@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 /**
  *
@@ -155,8 +156,10 @@ public class login extends javax.swing.JFrame {
         try {
             boolean check = md.login(tk, mk);
             if (check ==true) {
-                Menu menu = new Menu();  
-                md.chuyenFrame(this, menu);
+                index id = new index();
+                JLabel lb = new JLabel();
+                lb.add(id);
+                md.chuyenFrame(this, lb);
             }
         } catch (SQLException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
