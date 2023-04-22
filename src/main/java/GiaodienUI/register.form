@@ -145,6 +145,8 @@
         <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField1">
           <Properties>
             <Property name="text" type="java.lang.String" value="First Name (*)"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="actionCommand" type="java.lang.String" value="&lt;Not Set&gt;"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFormattedTextField1ActionPerformed"/>

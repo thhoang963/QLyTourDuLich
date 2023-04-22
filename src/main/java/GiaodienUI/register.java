@@ -56,6 +56,8 @@ public class register extends javax.swing.JFrame {
         jButton3.setActionCommand("");
 
         jFormattedTextField1.setText("First Name (*)");
+        jFormattedTextField1.setToolTipText("");
+        jFormattedTextField1.setActionCommand("<Not Set>");
         jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jFormattedTextField1ActionPerformed(evt);
