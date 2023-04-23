@@ -5,6 +5,8 @@
 package GiaodienUI;
 
 import DTo.ModuleXuLy;
+import KetnoiSQL_DAL.config;
+import java.awt.Menu;
 import java.awt.event.ActionEvent;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -12,6 +14,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 /**
  *
@@ -270,7 +274,21 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+          String tk = jTextField1.getText(); // Lấy giá trị từ jTextField1
+           String mk = new String(jPasswordField2.getPassword()); // Lấy giá trị từ jPasswordField2
+    ModuleXuLy md = new ModuleXuLy();
+         config setup = new config();
+        try {
+            if(md.login(tk, mk)) {
+                    JLabel menu = null;
+                md.chuyenFrame(this, menu);
+            } else {
+                // Xử lý khi đăng nhập thất bại
+            }   } catch (SQLException ex) {
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
