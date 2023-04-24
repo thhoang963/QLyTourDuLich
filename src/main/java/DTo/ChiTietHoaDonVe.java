@@ -10,7 +10,8 @@ public class ChiTietHoaDonVe {
         this.soluongve = soluongve;
         this.tienve = tienve;
     }
-
+    
+    manh123 123
     ChiTietHoaDonVe() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
