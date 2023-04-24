@@ -173,7 +173,6 @@ public class QuanLyKhachHang extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(255, 204, 204));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setText("      Họ và Tên");
         jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
