@@ -1,28 +1,29 @@
 package DTo;
 
 
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class NhanVien {
+public class NhanVien implements Comparable<NhanVien> {
     private String manv;
     private String loainv;
     private String tennv;
     private String diachi;
     private String chucvu;
     
-    public NhanVien()
-    {
-        
-    }
+    
 
-    public NhanVien(String manv, String loainv, String tennv, String diachi, String chucvu) {
+    public NhanVien(String manv, String loainv, String tennv, String diachi, String chucvu, ArrayList<NhanVien> danhSach) {
         this.manv = manv;
         this.loainv = loainv;
         this.tennv = tennv;
         this.diachi = diachi;
         this.chucvu = chucvu;
+        this.danhSach = danhSach;
     }
+
+    
     
     public NhanVien(NhanVien x)
     {
@@ -116,15 +117,18 @@ public class NhanVien {
         return Objects.equals(this.chucvu, other.chucvu);
     }
     
+    @Override
+    public int compareTo(NhanVien o) {
+        return this.manv.compareTo(o.manv);
+    }
+    
     public void nhap()
     {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap ma nhan vien: ");
         manv = sc.nextLine();
         System.out.println("Nhap loai nhan vien: ");
-        loainv = sc.nextLine();
-        System.out.println("Nhap ten nhan vien: ");
-        tennv = sc.nextLine();
+        loainv= sc.nextLine();
         System.out.println("Nhap dia chi: ");
         diachi = sc.nextLine();
         System.out.println("Nhap chuc vu: ");
@@ -134,9 +138,73 @@ public class NhanVien {
     public void xuat()
     {
         System.out.println("Ma nhan vien la: "+this.manv);
-        System.out.println("Loai nhan vien la: "+this.manv);
-        System.out.println("Ten nhan vien la: "+this.manv);
-        System.out.println("Dia chi la: "+this.manv);
-        System.out.println("Chuc vu la: "+this.manv);
+        System.out.println("Loai nhan vien: "+this.loainv);
+        System.out.println("Ten nhan vien la: "+this.tennv);
+        System.out.println("Dia chi la: "+this.diachi);
+        System.out.println("Chuc vu nhan vien: "+this.chucvu);
+    }
+    
+   private ArrayList<NhanVien>danhSach;
+
+        public NhanVien()
+    {
+        this.danhSach = new ArrayList<NhanVien>(); //cach khai bao 1 arrayList
+    }
+    
+    public NhanVien(ArrayList<NhanVien> danhSach) {
+        this.danhSach = danhSach;
+    }
+    
+    //1. Them khach hang vao danh sach 
+    public void themNhanVien(NhanVien nv)
+    {
+        this.danhSach.add(nv);    
+    }
+    
+    //2. Them In danh sach khach hang ra man hinh
+    public void inDanhSachNhanVien()
+    {
+        for (NhanVien nhanVien : danhSach) 
+        {
+            System.out.println(nhanVien);
+        }
+    }
+    
+    //3. Kiem tra danh sach khach hang co rong hay khong
+    public boolean kiemTraDanhSachRong()
+    {
+        return this.danhSach.isEmpty();
+    }
+    
+    //4. Lay ra so luong khach hang trong danh sach
+    public int laySoLuong()
+    {
+        return this.danhSach.size();
+    }
+    //5. lam rong danh sach khach hang
+    public void lamRongDanhSach()
+    {
+        this.danhSach.removeAll(danhSach);
+    }
+    
+    //6. Kiem tra khach hang co ton tai trong danh sach hay khong, dua tren ma khach hang
+    public boolean kiemTraTonTai(NhanVien nv)
+    {
+        return this.danhSach.contains(nv);
+    }
+    //7. Xoa mot khach hang ra khoi danh sach khach hang dua tren ma khach hang
+    public boolean  xoaKhachHang(NhanVien nv)
+    {
+        return this.danhSach.remove(nv);
+    }
+    
+    //8. Tim kiem tat ca khach hang dua tren Ma khach hang duoc nhap tu ban phim
+    public void timKhachHang(String ma)
+    {
+        for (NhanVien nhanVien : danhSach) 
+        {
+            if(nhanVien.getManv().contains(ma));
+            System.out.println(nhanVien);
+        }
     }
 }

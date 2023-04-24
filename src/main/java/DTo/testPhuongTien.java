@@ -3,7 +3,7 @@ package DTo;
 
 import java.util.Scanner;
 
-public class test3 {
+public class testPhuongTien {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         PhuongTien dspt = new PhuongTien();
