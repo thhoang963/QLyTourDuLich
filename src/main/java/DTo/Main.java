@@ -35,6 +35,5 @@ public class Main {
           JFrame frame = new JFrame();
           login login = new login();
           login.setVisible(true);
-
     }
 }

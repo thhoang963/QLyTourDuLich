@@ -2,8 +2,11 @@ package DTo;
 
 import DTo.TaiKhoan;
 import GiaodienUI.Menu;
+import GiaodienUI.index;
+import GiaodienUI.login;
 import KetnoiSQL_DAL.config;
 import java.awt.Frame;
+import java.awt.PopupMenu;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JFrame;
@@ -30,15 +33,13 @@ public class ModuleXuLy {
     }
         return false;
     }
-    public void chuyenFrame(JFrame mot,JLabel hai)
+    public void chuyenFrame(JFrame mot)
     {
         mot.setVisible(false);
-        Frame frame = new Frame();
-        Menu mn = new Menu();
-        JLabel jb = new JLabel();
-        jb.add(mn);
-        mainFrame(jb,hai);
-        
+        JFrame frame = new Menu();
+        JFrame frame2 = new index();
+        frame.setVisible(true);
+        frame2.setVisible(true);
     }
     
     public void mainFrame(JLabel F1, JLabel F2){
@@ -47,6 +48,5 @@ public class ModuleXuLy {
         main.add(F2);
         main.setVisible(true);
     }
-    
 }
 
