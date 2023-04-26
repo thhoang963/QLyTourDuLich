@@ -38,6 +38,7 @@ public class ModuleXuLy {
         mot.setVisible(false);
         JFrame frame = new Menu();
         JFrame frame2 = new index();
+        
         frame.setVisible(true);
         frame2.setVisible(true);
     }
