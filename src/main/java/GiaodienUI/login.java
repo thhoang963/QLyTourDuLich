@@ -287,8 +287,9 @@ public class login extends javax.swing.JFrame {
         try {
             boolean check = md.login(tk, mk);
             if (check ==true) {
-           
-                md.chuyenFrame(this);
+                
+                md.chuyenFrame(this,1);
+                
             }
         } catch (SQLException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);

@@ -31,8 +31,6 @@ public class Main {
             System.out.println(khachHang);
         }
           
-
-          JFrame frame = new JFrame();
           login login = new login();
           login.setVisible(true);
     }

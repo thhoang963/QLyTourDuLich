@@ -9,6 +9,7 @@ import java.awt.Frame;
 import java.awt.PopupMenu;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import javax.management.MBeanAttributeInfo;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -33,14 +34,30 @@ public class ModuleXuLy {
     }
         return false;
     }
-    public void chuyenFrame(JFrame mot)
+    public void chuyenFrame(JFrame mot,int flat)
     {
-        mot.setVisible(false);
-        JFrame frame = new Menu();
-        JFrame frame2 = new index();
+        JFrame main = new Menu();
         
-        frame.setVisible(true);
-        frame2.setVisible(true);
+        if (flat == 1) {
+            JPanel id = new index();
+            main.add(id);
+        }
+        mot.setVisible(false);
+        main.setVisible(true);    
+        
+        
+    }
+    public void chuyenFrameMenu(JFrame index,int flat)
+    {
+        index.removeAll();
+        if (flat == 1) {
+            JPanel id = new index();
+            
+            index.add(id);
+        }
+        index.setVisible(true);    
+        
+        
     }
     
     public void mainFrame(JLabel F1, JLabel F2){
