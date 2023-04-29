@@ -4,6 +4,13 @@
  */
 package GiaodienUI;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JButton;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Thanh Tran
@@ -343,9 +350,6 @@ public class QlyKhachHang extends javax.swing.JPanel {
         jTable1.setBackground(new java.awt.Color(204, 204, 204));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
                 {null, null, null, null, null, null}
             },
             new String [] {
@@ -416,11 +420,52 @@ public class QlyKhachHang extends javax.swing.JPanel {
     }//GEN-LAST:event_txtEmailActionPerformed
 
     private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
-        // TODO add your handling code here:
+        String hoTen = txtHoTen.getText();
+String maKhachHang = txtMaKhachHang.getText();
+String diaChi = txtDiaChi.getText();
+String soDienThoai = txtSoDienThoai.getText();
+String email = txtEmail.getText();
+
+DefaultTableModel model = (DefaultTableModel) jTable1.getModel(); // Lấy mô hình dữ liệu của bảng
+Object[] row = new Object[6]; // Tạo một mảng chứa dữ liệu của một dòng mới
+row[0] = model.getRowCount() + 1; // Đặt giá trị của cột STT là số thứ tự của dòng mới
+row[1] = hoTen; // Đặt giá trị của cột Họ tên là giá trị nhập vào từ ô nhập liệu
+row[2] = maKhachHang; // Đặt giá trị của cột Mã khách hàng là giá trị nhập vào từ ô nhập liệu
+row[3] = diaChi; // Đặt giá trị của cột Địa chỉ là giá trị nhập vào từ ô nhập liệu
+row[4] = soDienThoai; // Đặt giá trị của cột Số điện thoại là giá trị nhập vào từ ô nhập liệu
+row[5] = email; // Đặt giá trị của cột Email là giá trị nhập vào từ ô nhập liệu
+
+model.addRow(row); // Thêm dòng mới vào mô hình dữ liệu của bảng
+
     }//GEN-LAST:event_btnThemActionPerformed
 
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
-        // TODO add your handling code here:
+        
+        jTable1.addMouseListener(new MouseAdapter() {
+    public void mouseClicked(MouseEvent e) {
+        if (e.getClickCount() == 1) { // check for single-click
+            int row = jTable1.getSelectedRow();
+            int col = jTable1.getSelectedColumn();
+            if (col == 2) { // check if the clicked column is MaKhachHang
+                DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+                String maKhachHang = (String) model.getValueAt(row, 2);
+                for (int i = 0; i < model.getRowCount(); i++) {
+                    Object value = model.getValueAt(i, 2);
+                    if (value != null && value.equals(maKhachHang)) {
+                        model.removeRow(i); // remove the row with the specified MaKhachHang value
+                        break;
+                    }
+                }
+            }
+        }
+    }
+});
+
+
+
+
+
+
     }//GEN-LAST:event_btnXoaActionPerformed
 
     private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
