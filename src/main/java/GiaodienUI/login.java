@@ -280,7 +280,7 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUserActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-         String tk = txtUser.getText();
+        String tk = txtUser.getText();
         String mk = txtPassword.getText();
         
         ModuleXuLy md = new ModuleXuLy();
