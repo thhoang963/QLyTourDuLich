@@ -48,8 +48,6 @@ public class ModuleXuLy {
         fr.add(menu, BorderLayout.NORTH);
         fr.add(ind, BorderLayout.SOUTH);
         fr.setVisible(true);
-        
-        
     }
     public void chuyenFrameMenu(JFrame index,int flat)
     {
