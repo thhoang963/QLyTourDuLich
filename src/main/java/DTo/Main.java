@@ -32,6 +32,7 @@ public class Main {
         }
           
           login login = new login();
+          login.setLocationRelativeTo(login);
           login.setVisible(true);
     }
 }

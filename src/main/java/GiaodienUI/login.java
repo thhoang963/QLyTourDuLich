@@ -288,7 +288,7 @@ public class login extends javax.swing.JFrame {
             boolean check = md.login(tk, mk);
             if (check ==true) {
                 
-                md.chuyenFrame(this,1);
+                md.chuyenFrame(this);
                 
             }
         } catch (SQLException ex) {

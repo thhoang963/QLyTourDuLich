@@ -4,11 +4,14 @@ import DTo.TaiKhoan;
 import GiaodienUI.Menu;
 import GiaodienUI.index;
 import GiaodienUI.login;
+import GiaodienUI.topSideBar;
 import KetnoiSQL_DAL.config;
+import java.awt.BorderLayout;
 import java.awt.Frame;
 import java.awt.PopupMenu;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Locale;
 import javax.management.MBeanAttributeInfo;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -34,16 +37,17 @@ public class ModuleXuLy {
     }
         return false;
     }
-    public void chuyenFrame(JFrame mot,int flat)
+    public void chuyenFrame(JFrame mot)
     {
-        JFrame main = new Menu();
-        
-        if (flat == 1) {
-            JPanel id = new index();
-            main.add(id);
-        }
+        JPanel menu = new topSideBar();
+        JPanel ind = new index();
         mot.setVisible(false);
-        main.setVisible(true);    
+        JFrame fr = new JFrame();
+        fr.setSize(1000, 650);
+        fr.setLocationRelativeTo(fr);
+        fr.add(menu, BorderLayout.NORTH);
+        fr.add(ind, BorderLayout.SOUTH);
+        fr.setVisible(true);
         
         
     }
