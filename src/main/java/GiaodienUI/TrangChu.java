@@ -8,12 +8,12 @@ package GiaodienUI;
  *
  * @author Thanh Tran
  */
-public class Menu extends javax.swing.JPanel {
+public class TrangChu extends javax.swing.JPanel {
 
     /**
      * Creates new form Menu
      */
-    public Menu() {
+    public TrangChu() {
         initComponents();
     }
 
@@ -181,6 +181,8 @@ public class Menu extends javax.swing.JPanel {
                 .addComponent(jButton6)
                 .addGap(26, 26, 26))
         );
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
