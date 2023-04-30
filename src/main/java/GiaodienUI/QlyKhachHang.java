@@ -9,14 +9,16 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
  * @author Thanh Tran
  */
 public class QlyKhachHang extends javax.swing.JPanel {
-
+    
     /**
      * Creates new form QlyKhachHang
      */
@@ -364,6 +366,11 @@ public class QlyKhachHang extends javax.swing.JPanel {
                 return types [columnIndex];
             }
         });
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -441,40 +448,56 @@ model.addRow(row); // Thêm dòng mới vào mô hình dữ liệu của bảng
 
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
         
-        jTable1.addMouseListener(new MouseAdapter() {
-    public void mouseClicked(MouseEvent e) {
-        if (e.getClickCount() == 1) { // check for single-click
-            int row = jTable1.getSelectedRow();
-            int col = jTable1.getSelectedColumn();
-            if (col == 2) { // check if the clicked column is MaKhachHang
-                DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-                String maKhachHang = (String) model.getValueAt(row, 2);
-                for (int i = 0; i < model.getRowCount(); i++) {
-                    Object value = model.getValueAt(i, 2);
-                    if (value != null && value.equals(maKhachHang)) {
-                        model.removeRow(i); // remove the row with the specified MaKhachHang value
-                        break;
-                    }
-                }
-            }
-        }
+        int selectedRow = jTable1.getSelectedRow(); // Lấy chỉ số hàng được chọn trong bảng
+    if (selectedRow >= 0) { // Kiểm tra xem có hàng nào được chọn không
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel(); // Lấy mô hình dữ liệu của bảng
+        model.removeRow(selectedRow); // Xóa hàng được chọn khỏi mô hình dữ liệu của bảng
     }
-});
-
-
-
-
-
-
     }//GEN-LAST:event_btnXoaActionPerformed
-
+       
     private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSuaActionPerformed
+        int selectedRow = jTable1.getSelectedRow(); // Lấy chỉ số hàng được chọn trong bảng
+    DefaultTableModel model = (DefaultTableModel) jTable1.getModel(); // Lấy mô hình dữ liệu của bảng
 
+    // Lấy thông tin đã sửa và cập nhật lại hàng trong bảng
+    model.setValueAt(txtHoTen.getText(), selectedRow, 1);
+    model.setValueAt(txtMaKhachHang.getText(), selectedRow, 2);
+    model.setValueAt(txtDiaChi.getText(), selectedRow, 3);
+    model.setValueAt(txtSoDienThoai.getText(), selectedRow, 4);
+    model.setValueAt(txtEmail.getText(), selectedRow, 5);
+    }//GEN-LAST:event_btnSuaActionPerformed
+    
     private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
-        // TODO add your handling code here:
+        String query = txtMaKhachHang.getText().trim(); // Get the user's search query and trim any leading/trailing spaces
+DefaultTableModel model = (DefaultTableModel) jTable1.getModel(); // Get the table's data model
+TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<DefaultTableModel>(model); // Create a row sorter based on the model
+
+jTable1.setRowSorter(sorter); // Set the table's row sorter to the sorter we just created
+
+if (query.length() == 0) {
+    sorter.setRowFilter(null); // If the search query is empty, show all rows in the table
+} else {
+    try {
+        RowFilter<DefaultTableModel, Object> filter = RowFilter.regexFilter("(?i)" + query, 2); // Create a row filter that matches the user's search query (ignoring case) in the second column (index 1)
+        sorter.setRowFilter(filter); // Set the table's row filter to the filter we just created
+    } catch (Exception ex) {
+        System.out.println("Invalid regex pattern: " + ex.getMessage()); // Handle any exceptions that may occur when creating the row filter
+    }
+}
+
     }//GEN-LAST:event_btnTimKiemActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        int selectedRow = jTable1.getSelectedRow(); // Lấy chỉ số hàng được chọn trong bảng
+    DefaultTableModel model = (DefaultTableModel) jTable1.getModel(); // Lấy mô hình dữ liệu của bảng
+
+    // Lấy thông tin của hàng được chọn và hiển thị trên các trường nhập liệu tương ứng
+    txtHoTen.setText((String) model.getValueAt(selectedRow, 1));
+    txtMaKhachHang.setText((String) model.getValueAt(selectedRow, 2));
+    txtDiaChi.setText((String) model.getValueAt(selectedRow, 3));
+    txtSoDienThoai.setText((String) model.getValueAt(selectedRow, 4));
+    txtEmail.setText((String) model.getValueAt(selectedRow, 5));
+    }//GEN-LAST:event_jTable1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
