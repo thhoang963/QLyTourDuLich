@@ -40,7 +40,7 @@ public class ModuleXuLy {
     }
     public void chuyenFrame(JFrame mot)
     {
-        /*JPanel menu = new topSideBar();
+        JPanel menu = new topSideBar();
         JPanel ind = new index();
         mot.setVisible(false);
         JFrame fr = new JFrame();
@@ -49,20 +49,7 @@ public class ModuleXuLy {
         fr.add(menu, BorderLayout.NORTH);
         fr.add(ind, BorderLayout.SOUTH);
         fr.setVisible(true);
-        */
-        JFrame fr = new JFrame();
-        JPanel ind = new index();
-        SideMenuPanel sp;
-        sp = new SideMenuPanel(fr);
-        sp.setMain(ind);
-        JPanel TC = new TrangChu();
-        sp.setSide(TC);
-        sp.setMinWidth(55);
-        sp.setMaxWidth(150);
-        sp.setMainAnimation(true);
-        sp.setSpeed(4);
-        sp.setResponsiveMinWidth(600);
-        sp.openMenu();
+        
     }
     public void chuyenFrameMenu(JFrame index,int flat)
     {
