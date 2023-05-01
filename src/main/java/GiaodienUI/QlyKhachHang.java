@@ -4,11 +4,13 @@
  */
 package GiaodienUI;
 
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
@@ -18,6 +20,8 @@ import javax.swing.table.TableRowSorter;
  * @author Thanh Tran
  */
 public class QlyKhachHang extends javax.swing.JPanel {
+
+    private Component rootPane;
     
     /**
      * Creates new form QlyKhachHang
@@ -435,13 +439,29 @@ String email = txtEmail.getText();
 
 DefaultTableModel model = (DefaultTableModel) jTable1.getModel(); // Lấy mô hình dữ liệu của bảng
 Object[] row = new Object[6]; // Tạo một mảng chứa dữ liệu của một dòng mới
-row[0] = model.getRowCount() + 1; // Đặt giá trị của cột STT là số thứ tự của dòng mới
+
+if(hoTen.equals("")){
+    JOptionPane.showMessageDialog(rootPane, "Nhập Đầy Đủ Thông Tin !");
+}
+else if(maKhachHang.equals("")){
+    JOptionPane.showMessageDialog(rootPane, "Nhập Đầy Đủ Thông Tin !");
+}
+else if(diaChi.equals("")){
+    JOptionPane.showMessageDialog(rootPane, "Nhập Đầy Đủ Thông Tin !");
+}
+else if(soDienThoai.equals("")){
+    JOptionPane.showMessageDialog(rootPane, "Nhập Đầy Đủ Thông Tin !");
+}
+else if(email.equals("")){
+    JOptionPane.showMessageDialog(rootPane, "Nhập Đầy Đủ Thông Tin !");
+}
+else{
+    row[0] = model.getRowCount() + 1; // Đặt giá trị của cột STT là số thứ tự của dòng mới
 row[1] = hoTen; // Đặt giá trị của cột Họ tên là giá trị nhập vào từ ô nhập liệu
 row[2] = maKhachHang; // Đặt giá trị của cột Mã khách hàng là giá trị nhập vào từ ô nhập liệu
 row[3] = diaChi; // Đặt giá trị của cột Địa chỉ là giá trị nhập vào từ ô nhập liệu
 row[4] = soDienThoai; // Đặt giá trị của cột Số điện thoại là giá trị nhập vào từ ô nhập liệu
 row[5] = email; // Đặt giá trị của cột Email là giá trị nhập vào từ ô nhập liệu
-
 model.addRow(row); // Thêm dòng mới vào mô hình dữ liệu của bảng
 
 txtHoTen.setText("");
@@ -449,6 +469,7 @@ txtMaKhachHang.setText("");
 txtDiaChi.setText("");
 txtSoDienThoai.setText("");
 txtEmail.setText("");
+}
     }//GEN-LAST:event_btnThemActionPerformed
 
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
@@ -467,10 +488,32 @@ txtEmail.setText("");
     }//GEN-LAST:event_btnXoaActionPerformed
        
     private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
+         String hoTen = txtHoTen.getText();
+String maKhachHang = txtMaKhachHang.getText();
+String diaChi = txtDiaChi.getText();
+String soDienThoai = txtSoDienThoai.getText();
+String email = txtEmail.getText();
+
         int selectedRow = jTable1.getSelectedRow(); // Lấy chỉ số hàng được chọn trong bảng
     DefaultTableModel model = (DefaultTableModel) jTable1.getModel(); // Lấy mô hình dữ liệu của bảng
-
-    // Lấy thông tin đã sửa và cập nhật lại hàng trong bảng
+    
+    if(hoTen.equals("")){
+    JOptionPane.showMessageDialog(rootPane, "Nhập Thông Tin Cần Sửa !");
+}
+else if(maKhachHang.equals("")){
+    JOptionPane.showMessageDialog(rootPane, "Nhập Thông Tin Cần Sửa !");
+}
+else if(diaChi.equals("")){
+    JOptionPane.showMessageDialog(rootPane, "Nhập Thông Tin Cần Sửa !");
+}
+else if(soDienThoai.equals("")){
+    JOptionPane.showMessageDialog(rootPane, "Nhập Thông Tin Cần Sửa !");
+}
+else if(email.equals("")){
+    JOptionPane.showMessageDialog(rootPane, "Nhập Thông Tin Cần Sửa !");
+}
+else{
+     // Lấy thông tin đã sửa và cập nhật lại hàng trong bảng
     model.setValueAt(txtHoTen.getText(), selectedRow, 1);
     model.setValueAt(txtMaKhachHang.getText(), selectedRow, 2);
     model.setValueAt(txtDiaChi.getText(), selectedRow, 3);
@@ -482,6 +525,7 @@ txtMaKhachHang.setText("");
 txtDiaChi.setText("");
 txtSoDienThoai.setText("");
 txtEmail.setText("");
+}
     }//GEN-LAST:event_btnSuaActionPerformed
     
     private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
