@@ -444,6 +444,11 @@ row[5] = email; // Đặt giá trị của cột Email là giá trị nhập và
 
 model.addRow(row); // Thêm dòng mới vào mô hình dữ liệu của bảng
 
+txtHoTen.setText("");
+txtMaKhachHang.setText("");
+txtDiaChi.setText("");
+txtSoDienThoai.setText("");
+txtEmail.setText("");
     }//GEN-LAST:event_btnThemActionPerformed
 
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
@@ -453,6 +458,12 @@ model.addRow(row); // Thêm dòng mới vào mô hình dữ liệu của bảng
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel(); // Lấy mô hình dữ liệu của bảng
         model.removeRow(selectedRow); // Xóa hàng được chọn khỏi mô hình dữ liệu của bảng
     }
+    
+    txtHoTen.setText("");
+txtMaKhachHang.setText("");
+txtDiaChi.setText("");
+txtSoDienThoai.setText("");
+txtEmail.setText("");
     }//GEN-LAST:event_btnXoaActionPerformed
        
     private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
@@ -465,6 +476,12 @@ model.addRow(row); // Thêm dòng mới vào mô hình dữ liệu của bảng
     model.setValueAt(txtDiaChi.getText(), selectedRow, 3);
     model.setValueAt(txtSoDienThoai.getText(), selectedRow, 4);
     model.setValueAt(txtEmail.getText(), selectedRow, 5);
+    
+    txtHoTen.setText("");
+txtMaKhachHang.setText("");
+txtDiaChi.setText("");
+txtSoDienThoai.setText("");
+txtEmail.setText("");
     }//GEN-LAST:event_btnSuaActionPerformed
     
     private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
