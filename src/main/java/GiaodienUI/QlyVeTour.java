@@ -548,10 +548,7 @@ public class QlyVeTour extends javax.swing.JPanel {
         jTable1.setBackground(new java.awt.Color(204, 204, 204));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "STT", "Tên Tour", "Mã Tour", "Loại Tour", "Tổng Số Chỗ", "Số Chỗ Dư", "Địa Điểm Tour", "Địa Điểm Đi", "Địa Điểm Đến", "Số Ngày Đi", "Ngày Đi", "Ngày Về", "Giá Tour"
