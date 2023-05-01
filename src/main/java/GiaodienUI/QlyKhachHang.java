@@ -530,21 +530,21 @@ txtEmail.setText("");
     
     private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
         String query = txtMaKhachHang.getText().trim(); // Get the user's search query and trim any leading/trailing spaces
-DefaultTableModel model = (DefaultTableModel) jTable1.getModel(); // Get the table's data model
-TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<DefaultTableModel>(model); // Create a row sorter based on the model
+    DefaultTableModel model = (DefaultTableModel) jTable1.getModel(); // Get the table's data model
+    TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<DefaultTableModel>(model); // Create a row sorter based on the model
 
-jTable1.setRowSorter(sorter); // Set the table's row sorter to the sorter we just created
+    jTable1.setRowSorter(sorter); // Set the table's row sorter to the sorter we just created
 
-if (query.length() == 0) {
-    sorter.setRowFilter(null); // If the search query is empty, show all rows in the table
-} else {
-    try {
-        RowFilter<DefaultTableModel, Object> filter = RowFilter.regexFilter("(?i)" + query, 2); // Create a row filter that matches the user's search query (ignoring case) in the second column (index 1)
-        sorter.setRowFilter(filter); // Set the table's row filter to the filter we just created
-    } catch (Exception ex) {
-        System.out.println("Invalid regex pattern: " + ex.getMessage()); // Handle any exceptions that may occur when creating the row filter
+    if (query.length() == 0) {
+        sorter.setRowFilter(null); // If the search query is empty, show all rows in the table
+    } else {
+        try {
+            RowFilter<DefaultTableModel, Object> filter = RowFilter.regexFilter("(?i)" + query, 2); // Create a row filter that matches the user's search query (ignoring case) in the second column (index 1)
+            sorter.setRowFilter(filter); // Set the table's row filter to the filter we just created
+        } catch (Exception ex) {
+            System.out.println("Invalid regex pattern: " + ex.getMessage()); // Handle any exceptions that may occur when creating the row filter
+        }
     }
-}
 
     }//GEN-LAST:event_btnTimKiemActionPerformed
 
