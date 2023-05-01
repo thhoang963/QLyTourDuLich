@@ -1,16 +1,6 @@
 package GiaodienUI;
-
 import DTo.SideMenuPanel;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author ian
- */
 public class Test extends javax.swing.JFrame {
 
     SideMenuPanel sp;
@@ -38,7 +28,6 @@ public class Test extends javax.swing.JFrame {
         settings = new javax.swing.JButton();
         home = new javax.swing.JButton();
         men = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
         mainPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -55,7 +44,6 @@ public class Test extends javax.swing.JFrame {
 
         settings.setFont(new java.awt.Font("Microsoft PhagsPa", 0, 14)); // NOI18N
         settings.setForeground(new java.awt.Color(195, 217, 233));
-        settings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GiaodienUI/settings (Custom).png"))); // NOI18N
         settings.setText("Settings");
         settings.setBorderPainted(false);
         settings.setContentAreaFilled(false);
@@ -70,7 +58,6 @@ public class Test extends javax.swing.JFrame {
 
         home.setFont(new java.awt.Font("Microsoft PhagsPa", 0, 14)); // NOI18N
         home.setForeground(new java.awt.Color(195, 217, 233));
-        home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GiaodienUI/home (Custom).png"))); // NOI18N
         home.setText("Home");
         home.setBorderPainted(false);
         home.setContentAreaFilled(false);
@@ -84,7 +71,6 @@ public class Test extends javax.swing.JFrame {
 
         men.setBackground(new java.awt.Color(34, 40, 47));
         men.setFont(new java.awt.Font("Microsoft PhagsPa", 0, 14)); // NOI18N
-        men.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GiaodienUI/menu_15.png"))); // NOI18N
         men.setBorderPainted(false);
         men.setContentAreaFilled(false);
         men.setFocusPainted(false);
@@ -101,11 +87,6 @@ public class Test extends javax.swing.JFrame {
             }
         });
 
-        jLabel13.setFont(new java.awt.Font("Microsoft PhagsPa", 0, 10)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(126, 170, 214));
-        jLabel13.setText("<html>Credits to Ian Divingracia</html>");
-        jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
         javax.swing.GroupLayout sidebarLayout = new javax.swing.GroupLayout(sidebar);
         sidebar.setLayout(sidebarLayout);
         sidebarLayout.setHorizontalGroup(
@@ -116,10 +97,6 @@ public class Test extends javax.swing.JFrame {
                     .addComponent(men, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(settings, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(sidebarLayout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         sidebarLayout.setVerticalGroup(
             sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,9 +107,7 @@ public class Test extends javax.swing.JFrame {
                 .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(settings, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addContainerGap(540, Short.MAX_VALUE))
         );
 
         mainPanel.setBackground(new java.awt.Color(210, 231, 255));
@@ -307,7 +282,6 @@ public class Test extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
