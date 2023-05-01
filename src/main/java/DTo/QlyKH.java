@@ -20,7 +20,7 @@ js.setTitle("Quản lý khách hàng");
 QlyKhachHang qlkh = new QlyKhachHang();
 js.add(qlkh);
 js.setLocation(100, 100); // đặt vị trí
-js.setSize(800, 600); // đặt kích thước
+js.setSize(680, 600); // đặt kích thước
 js.setVisible(true);
 
 
