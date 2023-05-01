@@ -95,7 +95,7 @@ public class QlyDiaDiemVuiChoi extends javax.swing.JPanel {
         jLabel3.setText(" Địa Điểm Tour");
         jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxDiaDiemTour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxDiaDiemTour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chọn Địa Điểm Tour", " " }));
         cbxDiaDiemTour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxDiaDiemTourActionPerformed(evt);

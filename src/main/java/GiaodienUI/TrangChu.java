@@ -31,15 +31,15 @@ public class TrangChu extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnTrangChu = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton3 = new javax.swing.JButton();
+        btnQuanLy = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
-        jButton4 = new javax.swing.JButton();
+        btnDatVe = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
-        jButton5 = new javax.swing.JButton();
+        btnTraCuu = new javax.swing.JButton();
         jSeparator4 = new javax.swing.JSeparator();
-        jButton6 = new javax.swing.JButton();
+        btnLienHe = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -85,48 +85,48 @@ public class TrangChu extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 153));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 0));
-        jButton1.setText("Trang Chủ");
-        jButton1.setBorder(null);
+        btnTrangChu.setBackground(new java.awt.Color(0, 153, 153));
+        btnTrangChu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnTrangChu.setForeground(new java.awt.Color(255, 255, 0));
+        btnTrangChu.setText("Trang Chủ");
+        btnTrangChu.setBorder(null);
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
-        jButton3.setBackground(new java.awt.Color(0, 153, 153));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 0));
-        jButton3.setText("Quản Lý");
-        jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnQuanLy.setBackground(new java.awt.Color(0, 153, 153));
+        btnQuanLy.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnQuanLy.setForeground(new java.awt.Color(255, 255, 0));
+        btnQuanLy.setText("Quản Lý");
+        btnQuanLy.setBorder(null);
+        btnQuanLy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnQuanLyActionPerformed(evt);
             }
         });
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
-        jButton4.setBackground(new java.awt.Color(0, 153, 153));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 0));
-        jButton4.setText("Đặt Vé");
-        jButton4.setBorder(null);
+        btnDatVe.setBackground(new java.awt.Color(0, 153, 153));
+        btnDatVe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnDatVe.setForeground(new java.awt.Color(255, 255, 0));
+        btnDatVe.setText("Đặt Vé");
+        btnDatVe.setBorder(null);
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
 
-        jButton5.setBackground(new java.awt.Color(0, 153, 153));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 0));
-        jButton5.setText("Tra Cứu");
-        jButton5.setBorder(null);
+        btnTraCuu.setBackground(new java.awt.Color(0, 153, 153));
+        btnTraCuu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnTraCuu.setForeground(new java.awt.Color(255, 255, 0));
+        btnTraCuu.setText("Tra Cứu");
+        btnTraCuu.setBorder(null);
 
         jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
 
-        jButton6.setBackground(new java.awt.Color(0, 153, 153));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 0));
-        jButton6.setText("Liên Hệ ");
-        jButton6.setBorder(null);
+        btnLienHe.setBackground(new java.awt.Color(0, 153, 153));
+        btnLienHe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnLienHe.setForeground(new java.awt.Color(255, 255, 0));
+        btnLienHe.setText("Liên Hệ ");
+        btnLienHe.setBorder(null);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -143,42 +143,42 @@ public class TrangChu extends javax.swing.JPanel {
                             .addComponent(jSeparator3))
                         .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnTraCuu, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton4)
+                        .addComponent(btnDatVe)
                         .addGap(51, 51, 51))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(btnQuanLy)
                         .addGap(45, 45, 45))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(btnTrangChu)
                         .addGap(34, 34, 34))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton6)
+                        .addComponent(btnLienHe)
                         .addGap(45, 45, 45))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(11, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnTrangChu)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(btnQuanLy)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(btnDatVe)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(btnTraCuu)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(btnLienHe)
                 .addGap(26, 26, 26))
         );
 
@@ -216,17 +216,17 @@ public class TrangChu extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnQuanLyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuanLyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnQuanLyActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton btnDatVe;
+    private javax.swing.JButton btnLienHe;
+    private javax.swing.JButton btnQuanLy;
+    private javax.swing.JButton btnTraCuu;
+    private javax.swing.JButton btnTrangChu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

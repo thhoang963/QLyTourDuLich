@@ -117,7 +117,7 @@ public class QlyNhanVien extends javax.swing.JPanel {
         jLabel5.setText(" Loại Nhân Viên");
         jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxLoaiNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxLoaiNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại Nhân Viên" }));
         cbxLoaiNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxLoaiNhanVienActionPerformed(evt);
@@ -130,7 +130,7 @@ public class QlyNhanVien extends javax.swing.JPanel {
         jLabel6.setText("       Chức Vụ");
         jLabel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chức Vụ" }));
         cbxChucVu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxChucVuActionPerformed(evt);

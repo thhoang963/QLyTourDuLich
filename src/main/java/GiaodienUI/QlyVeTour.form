@@ -135,11 +135,11 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField4" max="32767" attributes="0"/>
-                                      <Component id="jTextField5" max="32767" attributes="0"/>
-                                      <Component id="jTextField1" min="-2" pref="200" max="-2" attributes="0"/>
-                                      <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtTongSoCho" max="32767" attributes="0"/>
+                                      <Component id="txtSoChoDu" max="32767" attributes="0"/>
+                                      <Component id="txtTenTour" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="txtMaTour" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtLoaiTour" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                   <Component id="jSeparator2" min="-2" pref="16" max="-2" attributes="0"/>
@@ -151,9 +151,9 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextField6" max="32767" attributes="0"/>
-                                      <Component id="jTextField7" max="32767" attributes="0"/>
-                                      <Component id="jTextField8" pref="197" max="32767" attributes="0"/>
+                                      <Component id="txtDiaDiemTour" max="32767" attributes="0"/>
+                                      <Component id="txtDiaDiemDi" max="32767" attributes="0"/>
+                                      <Component id="txtDiaDiemDen" pref="197" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -162,7 +162,7 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField9" min="-2" pref="240" max="-2" attributes="0"/>
+                          <Component id="txtSoNgayDi" min="-2" pref="240" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
@@ -173,20 +173,20 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="cbxNgayKhuyenMai1" min="-2" pref="99" max="-2" attributes="0"/>
+                                          <Component id="cbxNgayVe" min="-2" pref="99" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="cbxThangKhuyenMai1" min="-2" pref="99" max="-2" attributes="0"/>
+                                          <Component id="cbxThangVe" min="-2" pref="99" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="cbxNamKhuyenMai1" min="-2" pref="99" max="-2" attributes="0"/>
+                                          <Component id="cbxNamVe" min="-2" pref="99" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="cbxNgayKhuyenMai" min="-2" pref="99" max="-2" attributes="0"/>
+                                          <Component id="cbxNgayDi" min="-2" pref="99" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="cbxThangKhuyenMai" min="-2" pref="99" max="-2" attributes="0"/>
+                                          <Component id="cbxThangDi" min="-2" pref="99" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="cbxNamKhuyenMai" min="-2" pref="99" max="-2" attributes="0"/>
+                                          <Component id="cbxNamDi" min="-2" pref="99" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -194,13 +194,13 @@
                                   <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Component id="jButton2" min="-2" pref="92" max="-2" attributes="0"/>
+                                          <Component id="btnThem" min="-2" pref="92" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                          <Component id="jButton3" min="-2" pref="92" max="-2" attributes="0"/>
+                                          <Component id="btnXoa" min="-2" pref="92" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                          <Component id="jButton4" min="-2" pref="92" max="-2" attributes="0"/>
+                                          <Component id="btnSua" min="-2" pref="92" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnTimKiem" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jSeparator4" min="-2" pref="490" max="-2" attributes="0"/>
                                   </Group>
@@ -209,7 +209,7 @@
                                   <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
                                   <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField10" min="-2" pref="245" max="-2" attributes="0"/>
+                                  <Component id="txtGiaTour" min="-2" pref="245" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="115" max="32767" attributes="0"/>
@@ -227,45 +227,45 @@
                       <Component id="jSeparator2" min="-2" pref="178" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField1" pref="34" max="32767" attributes="0"/>
+                              <Component id="txtTenTour" pref="34" max="32767" attributes="0"/>
                               <Component id="jPanel3" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField2" pref="30" max="32767" attributes="0"/>
+                              <Component id="txtMaTour" pref="30" max="32767" attributes="0"/>
                               <Component id="jPanel4" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField3" pref="30" max="32767" attributes="0"/>
+                              <Component id="txtLoaiTour" pref="30" max="32767" attributes="0"/>
                               <Component id="jPanel5" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField4" pref="30" max="32767" attributes="0"/>
+                              <Component id="txtTongSoCho" pref="30" max="32767" attributes="0"/>
                               <Component id="jPanel6" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jPanel7" max="32767" attributes="0"/>
-                              <Component id="jTextField5" pref="30" max="32767" attributes="0"/>
+                              <Component id="txtSoChoDu" pref="30" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField6" pref="34" max="32767" attributes="0"/>
+                              <Component id="txtDiaDiemTour" pref="34" max="32767" attributes="0"/>
                               <Component id="jPanel8" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField7" pref="34" max="32767" attributes="0"/>
+                              <Component id="txtDiaDiemDi" pref="34" max="32767" attributes="0"/>
                               <Component id="jPanel12" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jPanel11" max="32767" attributes="0"/>
-                              <Component id="jTextField8" pref="34" max="32767" attributes="0"/>
+                              <Component id="txtDiaDiemDen" pref="34" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -274,38 +274,38 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jPanel9" max="32767" attributes="0"/>
-                      <Component id="jTextField9" max="32767" attributes="0"/>
+                      <Component id="txtSoNgayDi" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="cbxNgayKhuyenMai" max="32767" attributes="0"/>
+                      <Component id="cbxNgayDi" max="32767" attributes="0"/>
                       <Component id="jPanel10" max="32767" attributes="0"/>
-                      <Component id="cbxThangKhuyenMai" alignment="0" max="32767" attributes="0"/>
-                      <Component id="cbxNamKhuyenMai" alignment="0" max="32767" attributes="0"/>
+                      <Component id="cbxThangDi" alignment="0" max="32767" attributes="0"/>
+                      <Component id="cbxNamDi" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="cbxNgayKhuyenMai1" alignment="0" max="32767" attributes="0"/>
-                      <Component id="cbxNamKhuyenMai1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="cbxNgayVe" alignment="0" max="32767" attributes="0"/>
+                      <Component id="cbxNamVe" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="cbxThangKhuyenMai1" max="32767" attributes="0"/>
+                      <Component id="cbxThangVe" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jPanel14" max="32767" attributes="0"/>
-                      <Component id="jTextField10" pref="30" max="32767" attributes="0"/>
+                      <Component id="txtGiaTour" pref="30" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnThem" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnXoa" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSua" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnTimKiem" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               </Group>
@@ -453,15 +453,15 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="txtTenTour">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="txtMaTour">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
+        <Component class="javax.swing.JTextField" name="txtLoaiTour">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField4">
+        <Component class="javax.swing.JTextField" name="txtTongSoCho">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField5">
+        <Component class="javax.swing.JTextField" name="txtSoChoDu">
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator2">
           <Properties>
@@ -555,11 +555,11 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="jTextField6">
+        <Component class="javax.swing.JTextField" name="txtDiaDiemTour">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField7">
+        <Component class="javax.swing.JTextField" name="txtDiaDiemDi">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField8">
+        <Component class="javax.swing.JTextField" name="txtDiaDiemDen">
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator3">
           <Properties>
@@ -603,9 +603,9 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="jTextField9">
+        <Component class="javax.swing.JTextField" name="txtSoNgayDi">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField9ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSoNgayDiActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel10">
@@ -642,7 +642,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JComboBox" name="cbxNgayKhuyenMai">
+        <Component class="javax.swing.JComboBox" name="cbxNgayDi">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
@@ -652,13 +652,13 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxNgayKhuyenMaiActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxNgayDiActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cbxThangKhuyenMai">
+        <Component class="javax.swing.JComboBox" name="cbxThangDi">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
@@ -668,13 +668,13 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxThangKhuyenMaiActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxThangDiActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cbxNamKhuyenMai">
+        <Component class="javax.swing.JComboBox" name="cbxNamDi">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="1">
@@ -683,7 +683,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxNamKhuyenMaiActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxNamDiActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -720,7 +720,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JComboBox" name="cbxNgayKhuyenMai1">
+        <Component class="javax.swing.JComboBox" name="cbxNgayVe">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
@@ -730,13 +730,13 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxNgayKhuyenMai1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxNgayVeActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cbxThangKhuyenMai1">
+        <Component class="javax.swing.JComboBox" name="cbxThangVe">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
@@ -746,13 +746,13 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxThangKhuyenMai1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxThangVeActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cbxNamKhuyenMai1">
+        <Component class="javax.swing.JComboBox" name="cbxNamVe">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="1">
@@ -802,9 +802,9 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="jTextField10">
+        <Component class="javax.swing.JTextField" name="txtGiaTour">
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btnThem">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -819,10 +819,10 @@
             <Property name="borderPainted" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThemActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="btnXoa">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -837,7 +837,7 @@
             <Property name="borderPainted" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="btnSua">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -852,7 +852,7 @@
             <Property name="borderPainted" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="btnTimKiem">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -867,7 +867,7 @@
             <Property name="borderPainted" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTimKiemActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

@@ -77,7 +77,7 @@ public class QlyKhachSan extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxDiaDiemTour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxDiaDiemTour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chọn Địa Điểm Tour", " " }));
         cbxDiaDiemTour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxDiaDiemTourActionPerformed(evt);
@@ -96,7 +96,7 @@ public class QlyKhachSan extends javax.swing.JPanel {
         jLabel2.setText("      Tên Khách Sạn ");
         jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxTenKhachSan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxTenKhachSan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chọn Tên Khách Sạn", " " }));
         cbxTenKhachSan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxTenKhachSanActionPerformed(evt);
@@ -109,7 +109,7 @@ public class QlyKhachSan extends javax.swing.JPanel {
         jLabel3.setText(" Mã Khách Sạn ");
         jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxMaKhachSan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxMaKhachSan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chọn Mã Khách Sạn" }));
         cbxMaKhachSan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxMaKhachSanActionPerformed(evt);

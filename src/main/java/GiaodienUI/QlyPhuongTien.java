@@ -80,7 +80,7 @@ public class QlyPhuongTien extends javax.swing.JPanel {
         jLabel4.setText("  Loại Phương Tiện ");
         jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxLoaiPhuongTien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxLoaiPhuongTien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chọn Loại Phương Tiện" }));
         cbxLoaiPhuongTien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxLoaiPhuongTienActionPerformed(evt);

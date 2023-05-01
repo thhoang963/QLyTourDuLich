@@ -26,106 +26,106 @@ public class QuanLy extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        btnVuiChoi = new javax.swing.JButton();
+        btnNhanVien = new javax.swing.JButton();
+        btnKhachSan = new javax.swing.JButton();
+        btnKhuyenMai = new javax.swing.JButton();
+        btnKhachHang = new javax.swing.JButton();
+        btnDiaDiemTour = new javax.swing.JButton();
+        btnVeTour = new javax.swing.JButton();
+        btnPhuongTien = new javax.swing.JButton();
+        btnHoaDon = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 153));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 0));
-        jButton1.setText("Vui Chơi ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnVuiChoi.setBackground(new java.awt.Color(0, 153, 153));
+        btnVuiChoi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnVuiChoi.setForeground(new java.awt.Color(255, 255, 0));
+        btnVuiChoi.setText("Vui Chơi ");
+        btnVuiChoi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnVuiChoiActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 153));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 0));
-        jButton2.setText("Nhân Viên");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnNhanVien.setBackground(new java.awt.Color(0, 153, 153));
+        btnNhanVien.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnNhanVien.setForeground(new java.awt.Color(255, 255, 0));
+        btnNhanVien.setText("Nhân Viên");
+        btnNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnNhanVienActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(0, 153, 153));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 0));
-        jButton3.setText("Khách Sạn");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnKhachSan.setBackground(new java.awt.Color(0, 153, 153));
+        btnKhachSan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnKhachSan.setForeground(new java.awt.Color(255, 255, 0));
+        btnKhachSan.setText("Khách Sạn");
+        btnKhachSan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnKhachSanActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(0, 153, 153));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 0));
-        jButton4.setText("Khuyến Mãi");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnKhuyenMai.setBackground(new java.awt.Color(0, 153, 153));
+        btnKhuyenMai.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnKhuyenMai.setForeground(new java.awt.Color(255, 255, 0));
+        btnKhuyenMai.setText("Khuyến Mãi");
+        btnKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnKhuyenMaiActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(0, 153, 153));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 0));
-        jButton5.setText("Khách Hàng");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnKhachHang.setBackground(new java.awt.Color(0, 153, 153));
+        btnKhachHang.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnKhachHang.setForeground(new java.awt.Color(255, 255, 0));
+        btnKhachHang.setText("Khách Hàng");
+        btnKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnKhachHangActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(0, 153, 153));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 0));
-        jButton6.setText("Địa Điểm Tour");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btnDiaDiemTour.setBackground(new java.awt.Color(0, 153, 153));
+        btnDiaDiemTour.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnDiaDiemTour.setForeground(new java.awt.Color(255, 255, 0));
+        btnDiaDiemTour.setText("Địa Điểm Tour");
+        btnDiaDiemTour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btnDiaDiemTourActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(0, 153, 153));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 0));
-        jButton7.setText("Vé Tour");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        btnVeTour.setBackground(new java.awt.Color(0, 153, 153));
+        btnVeTour.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnVeTour.setForeground(new java.awt.Color(255, 255, 0));
+        btnVeTour.setText("Vé Tour");
+        btnVeTour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                btnVeTourActionPerformed(evt);
             }
         });
 
-        jButton9.setBackground(new java.awt.Color(0, 153, 153));
-        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 0));
-        jButton9.setText("Phương Tiện");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        btnPhuongTien.setBackground(new java.awt.Color(0, 153, 153));
+        btnPhuongTien.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPhuongTien.setForeground(new java.awt.Color(255, 255, 0));
+        btnPhuongTien.setText("Phương Tiện");
+        btnPhuongTien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                btnPhuongTienActionPerformed(evt);
             }
         });
 
-        jButton8.setBackground(new java.awt.Color(0, 153, 153));
-        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 0));
-        jButton8.setText("Hóa Đơn");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        btnHoaDon.setBackground(new java.awt.Color(0, 153, 153));
+        btnHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnHoaDon.setForeground(new java.awt.Color(255, 255, 0));
+        btnHoaDon.setText("Hóa Đơn");
+        btnHoaDon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                btnHoaDonActionPerformed(evt);
             }
         });
 
@@ -136,23 +136,23 @@ public class QuanLy extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDiaDiemTour, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPhuongTien, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(91, 91, 91)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnKhuyenMai, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnVuiChoi, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnVeTour, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnKhachSan, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(53, 53, 53))
         );
         layout.setVerticalGroup(
@@ -160,69 +160,69 @@ public class QuanLy extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVuiChoi, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnKhachSan, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVeTour, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDiaDiemTour, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnKhuyenMai, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPhuongTien, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnVuiChoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVuiChoiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnVuiChoiActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNhanVienActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnNhanVienActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnKhachSanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKhachSanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnKhachSanActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKhuyenMaiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnKhuyenMaiActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKhachHangActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnKhachHangActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void btnDiaDiemTourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiaDiemTourActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_btnDiaDiemTourActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void btnVeTourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVeTourActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_btnVeTourActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void btnPhuongTienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPhuongTienActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_btnPhuongTienActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void btnHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHoaDonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_btnHoaDonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton btnDiaDiemTour;
+    private javax.swing.JButton btnHoaDon;
+    private javax.swing.JButton btnKhachHang;
+    private javax.swing.JButton btnKhachSan;
+    private javax.swing.JButton btnKhuyenMai;
+    private javax.swing.JButton btnNhanVien;
+    private javax.swing.JButton btnPhuongTien;
+    private javax.swing.JButton btnVeTour;
+    private javax.swing.JButton btnVuiChoi;
     // End of variables declaration//GEN-END:variables
 }

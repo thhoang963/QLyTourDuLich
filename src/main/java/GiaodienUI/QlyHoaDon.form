@@ -123,8 +123,8 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jTextField2" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txtMaKhachHang" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtMaHoaDon" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="cbxNgayKhuyenMai" min="-2" pref="87" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -132,16 +132,16 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="cbxNamKhuyenMai" min="-2" pref="87" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jTextField3" max="32767" attributes="0"/>
+                      <Component id="txtTongTien" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jSeparator2" min="-2" pref="19" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jButton4" max="32767" attributes="0"/>
-                      <Component id="jButton3" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jButton2" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jButton1" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnTimKiem" max="32767" attributes="0"/>
+                      <Component id="btnSua" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnXoa" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnThem" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
               </Group>
@@ -153,23 +153,23 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jButton1" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="btnThem" min="-2" pref="33" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="btnXoa" min="-2" pref="33" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jButton3" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="btnSua" min="-2" pref="33" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jButton4" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="btnTimKiem" min="-2" pref="33" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jPanel3" max="32767" attributes="0"/>
-                              <Component id="jTextField2" pref="30" max="32767" attributes="0"/>
+                              <Component id="txtMaHoaDon" pref="30" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField1" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="txtMaKhachHang" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -183,7 +183,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jPanel6" max="32767" attributes="0"/>
-                              <Component id="jTextField3" pref="30" max="32767" attributes="0"/>
+                              <Component id="txtTongTien" pref="30" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="jSeparator2" max="32767" attributes="0"/>
@@ -309,7 +309,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="txtMaKhachHang">
         </Component>
         <Component class="javax.swing.JComboBox" name="cbxNgayKhuyenMai">
           <Properties>
@@ -358,9 +358,9 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="txtMaHoaDon">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMaHoaDonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator2">
@@ -371,7 +371,7 @@
             <Property name="orientation" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnThem">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -385,7 +385,7 @@
             <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btnXoa">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -399,7 +399,7 @@
             <Property name="text" type="java.lang.String" value="X&#xf3;a"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="btnSua">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -413,7 +413,7 @@
             <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="btnTimKiem">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -427,7 +427,7 @@
             <Property name="text" type="java.lang.String" value="T&#xec;m Ki&#x1ebf;m"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
+        <Component class="javax.swing.JTextField" name="txtTongTien">
         </Component>
       </SubComponents>
     </Container>

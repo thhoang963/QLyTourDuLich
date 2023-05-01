@@ -38,14 +38,14 @@ public class TraCuu extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        txtMaVeTour = new javax.swing.JTextField();
+        txtNoiDi = new javax.swing.JTextField();
+        txtNoiDen = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
-        jButton1 = new javax.swing.JButton();
-        cbxNgayKhuyenMai = new javax.swing.JComboBox<>();
-        cbxThangKhuyenMai = new javax.swing.JComboBox<>();
-        cbxNamKhuyenMai = new javax.swing.JComboBox<>();
+        btnSearch = new javax.swing.JButton();
+        cbxNgayDi = new javax.swing.JComboBox<>();
+        cbxThangDi = new javax.swing.JComboBox<>();
+        cbxNamDi = new javax.swing.JComboBox<>();
         jSeparator3 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -133,38 +133,38 @@ public class TraCuu extends javax.swing.JPanel {
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtMaVeTour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtMaVeTourActionPerformed(evt);
             }
         });
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        jButton1.setBackground(new java.awt.Color(255, 0, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Search");
+        btnSearch.setBackground(new java.awt.Color(255, 0, 0));
+        btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(255, 255, 255));
+        btnSearch.setText("Search");
 
-        cbxNgayKhuyenMai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ngày", " " }));
-        cbxNgayKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
+        cbxNgayDi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ngày", " " }));
+        cbxNgayDi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbxNgayKhuyenMaiActionPerformed(evt);
+                cbxNgayDiActionPerformed(evt);
             }
         });
 
-        cbxThangKhuyenMai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tháng", " " }));
-        cbxThangKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
+        cbxThangDi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tháng", " " }));
+        cbxThangDi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbxThangKhuyenMaiActionPerformed(evt);
+                cbxThangDiActionPerformed(evt);
             }
         });
 
-        cbxNamKhuyenMai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Năm" }));
-        cbxNamKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
+        cbxNamDi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Năm" }));
+        cbxNamDi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbxNamKhuyenMaiActionPerformed(evt);
+                cbxNamDiActionPerformed(evt);
             }
         });
 
@@ -181,26 +181,26 @@ public class TraCuu extends javax.swing.JPanel {
                             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField1)))
+                            .addComponent(txtNoiDi)
+                            .addComponent(txtMaVeTour)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3)
+                            .addComponent(txtNoiDen)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(cbxNgayKhuyenMai, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbxNgayDi, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbxThangKhuyenMai, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbxThangDi, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbxNamKhuyenMai, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbxNamDi, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(50, 50, 50)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -212,26 +212,26 @@ public class TraCuu extends javax.swing.JPanel {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                                    .addComponent(txtMaVeTour, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                                    .addComponent(txtNoiDi, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                                    .addComponent(txtNoiDen, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cbxNgayKhuyenMai, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(cbxNamKhuyenMai, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(cbxThangKhuyenMai, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                    .addComponent(cbxNgayDi, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(cbxNamDi, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(cbxThangDi, javax.swing.GroupLayout.Alignment.TRAILING)))
                             .addComponent(jSeparator2)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(69, 69, 69)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -291,28 +291,28 @@ public class TraCuu extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtMaVeTourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMaVeTourActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtMaVeTourActionPerformed
 
-    private void cbxNgayKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxNgayKhuyenMaiActionPerformed
+    private void cbxNgayDiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxNgayDiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbxNgayKhuyenMaiActionPerformed
+    }//GEN-LAST:event_cbxNgayDiActionPerformed
 
-    private void cbxThangKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxThangKhuyenMaiActionPerformed
+    private void cbxThangDiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxThangDiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbxThangKhuyenMaiActionPerformed
+    }//GEN-LAST:event_cbxThangDiActionPerformed
 
-    private void cbxNamKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxNamKhuyenMaiActionPerformed
+    private void cbxNamDiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxNamDiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbxNamKhuyenMaiActionPerformed
+    }//GEN-LAST:event_cbxNamDiActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> cbxNamKhuyenMai;
-    private javax.swing.JComboBox<String> cbxNgayKhuyenMai;
-    private javax.swing.JComboBox<String> cbxThangKhuyenMai;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnSearch;
+    private javax.swing.JComboBox<String> cbxNamDi;
+    private javax.swing.JComboBox<String> cbxNgayDi;
+    private javax.swing.JComboBox<String> cbxThangDi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -329,8 +329,8 @@ public class TraCuu extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField txtMaVeTour;
+    private javax.swing.JTextField txtNoiDen;
+    private javax.swing.JTextField txtNoiDi;
     // End of variables declaration//GEN-END:variables
 }
