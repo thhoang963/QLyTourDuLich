@@ -34,6 +34,12 @@ CREATE TABLE `taikhoan` (
   `loaitk` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
+CREATE TABLE `taikhoan` (
+  `tentaikhoan` text NOT NULL,
+  `matkhau` text NOT NULL,
+  `manv` int(11) NOT NULL,
+  `loaitk` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 --
 -- Đang đổ dữ liệu cho bảng `taikhoan`
 --
