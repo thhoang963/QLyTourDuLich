@@ -488,7 +488,34 @@ JOptionPane.showMessageDialog(null, "Sửa thông tin nhân viên thành công")
     }//GEN-LAST:event_btnSuaActionPerformed
 
     private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
-        // TODO add your handling code here:
+        String tenKHCanTim = txtMaNhanVien.getText();
+    
+    // Tạo một danh sách để lưu khách hàng tìm được
+    ArrayList<NhanVien> ketQuaTimKiem = new ArrayList<>();
+    
+    // Lặp qua danh sách khách hàng hiện tại để tìm kiếm
+    for (NhanVien kh : danhSachNV) {
+        if (kh.getManv().toLowerCase().contains(tenKHCanTim.toLowerCase())) {
+            ketQuaTimKiem.add(kh);
+        }
+    }
+    
+    // Tạo một model mới để hiển thị kết quả tìm kiếm trên JTable
+    DefaultTableModel model = new DefaultTableModel();
+    model.addColumn("Họ và tên");
+    model.addColumn("Mã nhân viên");
+    model.addColumn("Địa chỉ");
+    model.addColumn("Loại nhân viên");
+    model.addColumn("Chức vụ");
+    
+    // Thêm các khách hàng tìm được vào model
+    for (NhanVien kh : ketQuaTimKiem) {
+        model.addRow(new Object[]{kh.getTennv(), kh.getManv(), kh.getDiachi(), kh.getLoainv(), kh.getChucvu()});
+    }
+    
+    // Cập nhật lại model cho JTable
+    jTable1.setModel(model);
+
     }//GEN-LAST:event_btnTimKiemActionPerformed
 
 
