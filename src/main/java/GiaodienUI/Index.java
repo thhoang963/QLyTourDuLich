@@ -28,27 +28,38 @@ public class Index extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanelTop = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         leftSideBar = new javax.swing.JPanel();
         mainPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1000, 600));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 600));
 
-        jPanelTop.setBackground(new java.awt.Color(204, 204, 204));
+        jPanelTop.setBackground(new java.awt.Color(115, 169, 66));
+
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(20, 54, 1));
+        jLabel1.setText("SGU Tourist");
 
         javax.swing.GroupLayout jPanelTopLayout = new javax.swing.GroupLayout(jPanelTop);
         jPanelTop.setLayout(jPanelTopLayout);
         jPanelTopLayout.setHorizontalGroup(
             jPanelTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanelTopLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelTopLayout.setVerticalGroup(
             jPanelTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGroup(jPanelTopLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
+        leftSideBar.setBackground(new java.awt.Color(170, 213, 118));
         leftSideBar.setPreferredSize(new java.awt.Dimension(250, 514));
 
         javax.swing.GroupLayout leftSideBarLayout = new javax.swing.GroupLayout(leftSideBar);
@@ -143,6 +154,7 @@ public class Index extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelTop;
     private javax.swing.JPanel leftSideBar;
