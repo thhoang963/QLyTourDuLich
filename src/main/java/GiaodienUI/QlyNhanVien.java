@@ -4,12 +4,19 @@
  */
 package GiaodienUI;
 
+import DTo.KhachHang;
+import DTo.NhanVien;
+import java.util.ArrayList;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Thanh Tran
  */
 public class QlyNhanVien extends javax.swing.JPanel {
-
+    ArrayList<NhanVien> danhSachNV = new ArrayList<NhanVien>();
     /**
      * Creates new form QlyNhanVien
      */
@@ -117,7 +124,7 @@ public class QlyNhanVien extends javax.swing.JPanel {
         jLabel5.setText(" Loại Nhân Viên");
         jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxLoaiNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại Nhân Viên" }));
+        cbxLoaiNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại Nhân Viên", "Nhân viên", "khách hàng", " " }));
         cbxLoaiNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxLoaiNhanVienActionPerformed(evt);
@@ -130,7 +137,7 @@ public class QlyNhanVien extends javax.swing.JPanel {
         jLabel6.setText("       Chức Vụ");
         jLabel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chức Vụ" }));
+        cbxChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chức Vụ", "nhân viên", "khách hàng", "quản lý", " " }));
         cbxChucVu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxChucVuActionPerformed(evt);
@@ -261,14 +268,18 @@ public class QlyNhanVien extends javax.swing.JPanel {
         jTable1.setBackground(new java.awt.Color(204, 204, 204));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "STT", "Họ và Tên", "Mã Nhân Viên", "Địa Chỉ", "Loại Nhân Viên", "Chức Vụ"
+                "Họ và Tên", "Mã Nhân Viên", "Địa Chỉ", "Loại Nhân Viên", "Chức Vụ"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -327,21 +338,184 @@ public class QlyNhanVien extends javax.swing.JPanel {
     private void cbxChucVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxChucVuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbxChucVuActionPerformed
-
+   
     private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
-        // TODO add your handling code here:
+        // Lấy thông tin từ GUI
+    String maNV = txtMaNhanVien.getText();
+    String hoTen = txtHoTen.getText();
+    String diaChi = txtDiaChi.getText();
+    String loaiNV = cbxLoaiNhanVien.getSelectedItem().toString();
+    String chucVu = cbxChucVu.getSelectedItem().toString();
+
+    // Tạo đối tượng DTO
+    NhanVien nv = new NhanVien(hoTen,maNV, diaChi, loaiNV, chucVu);
+
+    // Thêm đối tượng vào danh sách
+    danhSachNV.add(nv);
+    
+    // Tạo đối tượng DefaultTableModel
+    DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+
+    // thêm đối tượng KhachHang vào model
+model.addRow(new Object[]{nv.getTennv(),nv.getManv(), nv.getDiachi(), nv.getLoainv(), nv.getChucvu()});
+
+// cập nhật lại model cho JTable
+jTable1.setModel(model);
+
+// thông báo thành công
+JOptionPane.showMessageDialog(null, "Thêm nhân viên thành công");
+
     }//GEN-LAST:event_btnThemActionPerformed
 
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
-        // TODO add your handling code here:
+        // lấy chỉ số hàng được chọn trong JTable
+int selectedRow = jTable1.getSelectedRow();
+
+// nếu không có hàng nào được chọn, thông báo lỗi và kết thúc
+if (selectedRow == -1) {
+    JOptionPane.showMessageDialog(null, "Vui lòng chọn một hàng để xóa");
+    return;
+}
+
+// lấy ra model của JTable hiện tại
+DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+
+// lấy mã khách hàng của hàng được chọn
+String maNV = (String) model.getValueAt(selectedRow, 1);
+
+
+// tìm khách hàng trong danh sách dựa vào mã
+NhanVien khachHangCanXoa = null;
+for (NhanVien nv : danhSachNV) {
+    if (nv.getManv().equals(maNV)) {
+        khachHangCanXoa = nv;
+        break;
+    }
+}
+
+// nếu không tìm thấy khách hàng, thông báo lỗi và kết thúc
+if (khachHangCanXoa == null) {
+    JOptionPane.showMessageDialog(null, "Khách hàng không tồn tại");
+    return;
+}
+
+// xóa khách hàng khỏi danh sách
+danhSachNV.remove(khachHangCanXoa);
+
+// xóa hàng được chọn trong model
+model.removeRow(selectedRow);
+
+// cập nhật lại model cho JTable
+jTable1.setModel(model);
+
+// thông báo thành công
+JOptionPane.showMessageDialog(null, "Xóa nhân viên thành công");
+
     }//GEN-LAST:event_btnXoaActionPerformed
 
     private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
-        // TODO add your handling code here:
+        // lấy chỉ số hàng được chọn trong JTable
+int selectedRow = jTable1.getSelectedRow();
+
+// nếu không có hàng nào được chọn, thông báo lỗi và kết thúc
+if (selectedRow == -1) {
+    JOptionPane.showMessageDialog(null, "Vui lòng chọn một hàng để sửa");
+    return;
+}
+
+// lấy ra model của JTable hiện tại
+DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+
+// lấy mã khách hàng của hàng được chọn
+String maNV = (String) model.getValueAt(selectedRow, 1);
+
+// tìm khách hàng trong danh sách dựa vào mã
+NhanVien khachHangCanSua = null;
+for (NhanVien kh : danhSachNV) {
+    if (kh.getManv().equals(maNV)) {
+        khachHangCanSua = kh;
+        break;
+    }
+}
+
+// nếu không tìm thấy khách hàng, thông báo lỗi và kết thúc
+if (khachHangCanSua == null) {
+    JOptionPane.showMessageDialog(null, "Nhân viên không tồn tại");
+    return;
+}
+
+// hiển thị form sửa thông tin khách hàng
+String tenNV = JOptionPane.showInputDialog(null, "Nhập tên nhân viên", khachHangCanSua.getTennv());
+String maNVNew = JOptionPane.showInputDialog(null, "Nhập mã nhân viên", maNV);
+String diaChi = JOptionPane.showInputDialog(null, "Nhập địa chỉ", khachHangCanSua.getDiachi());
+// thêm ComboBox để chọn loại nhân viên
+JComboBox<String> cbxLoaiNhanVien = new JComboBox<>();
+cbxLoaiNhanVien.addItem("Nhân viên bán hàng");
+cbxLoaiNhanVien.addItem("Quản lý kho");
+cbxLoaiNhanVien.addItem("Nhân viên văn phòng");
+cbxLoaiNhanVien.setSelectedItem(khachHangCanSua.getLoainv());
+JOptionPane.showMessageDialog(null, cbxLoaiNhanVien, "Chọn loại nhân viên", JOptionPane.QUESTION_MESSAGE);
+
+String loainv = (String) cbxLoaiNhanVien.getSelectedItem();
+// thêm ComboBox để chọn chức vụ
+JComboBox<String> cbxChucVu = new JComboBox<>();
+cbxChucVu.addItem("Nhân viên");
+cbxChucVu.addItem("Quản lý");
+cbxChucVu.setSelectedItem(khachHangCanSua.getChucvu());
+JOptionPane.showMessageDialog(null, cbxChucVu, "Chọn chức vụ", JOptionPane.QUESTION_MESSAGE);
+
+String chucvu = (String) cbxChucVu.getSelectedItem();
+
+
+// cập nhật thông tin khách hàng
+khachHangCanSua.setTennv(tenNV);
+khachHangCanSua.setManv(maNVNew);
+khachHangCanSua.setDiachi(diaChi);
+khachHangCanSua.setLoainv(loainv);
+khachHangCanSua.setChucvu(chucvu);
+
+// cập nhật lại model cho JTable
+model.setValueAt(tenNV, selectedRow, 0);
+model.setValueAt(maNVNew, selectedRow, 1);
+model.setValueAt(diaChi, selectedRow, 2);
+model.setValueAt(loainv, selectedRow, 3);
+model.setValueAt(chucvu, selectedRow, 4);
+
+
+// thông báo thành công
+JOptionPane.showMessageDialog(null, "Sửa thông tin nhân viên thành công");
+
     }//GEN-LAST:event_btnSuaActionPerformed
 
     private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
-        // TODO add your handling code here:
+        String tenKHCanTim = txtMaNhanVien.getText();
+    
+    // Tạo một danh sách để lưu khách hàng tìm được
+    ArrayList<NhanVien> ketQuaTimKiem = new ArrayList<>();
+    
+    // Lặp qua danh sách khách hàng hiện tại để tìm kiếm
+    for (NhanVien kh : danhSachNV) {
+        if (kh.getManv().toLowerCase().contains(tenKHCanTim.toLowerCase())) {
+            ketQuaTimKiem.add(kh);
+        }
+    }
+    
+    // Tạo một model mới để hiển thị kết quả tìm kiếm trên JTable
+    DefaultTableModel model = new DefaultTableModel();
+    model.addColumn("Họ và tên");
+    model.addColumn("Mã nhân viên");
+    model.addColumn("Địa chỉ");
+    model.addColumn("Loại nhân viên");
+    model.addColumn("Chức vụ");
+    
+    // Thêm các khách hàng tìm được vào model
+    for (NhanVien kh : ketQuaTimKiem) {
+        model.addRow(new Object[]{kh.getTennv(), kh.getManv(), kh.getDiachi(), kh.getLoainv(), kh.getChucvu()});
+    }
+    
+    // Cập nhật lại model cho JTable
+    jTable1.setModel(model);
+
     }//GEN-LAST:event_btnTimKiemActionPerformed
 
 

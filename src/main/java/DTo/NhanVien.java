@@ -14,13 +14,13 @@ public class NhanVien implements Comparable<NhanVien> {
     
     
 
-    public NhanVien(String manv, String loainv, String tennv, String diachi, String chucvu, ArrayList<NhanVien> danhSach) {
+    public NhanVien(String tennv,String manv,  String diachi,String loainv, String chucvu) {
         this.manv = manv;
         this.loainv = loainv;
         this.tennv = tennv;
         this.diachi = diachi;
         this.chucvu = chucvu;
-        this.danhSach = danhSach;
+      
     }
 
     
