@@ -26,11 +26,15 @@ public class Index extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jPanelTop = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         leftSideBar = new javax.swing.JPanel();
+        menu1 = new GiaodienUI.menu();
         mainPanel = new javax.swing.JPanel();
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,11 +70,17 @@ public class Index extends javax.swing.JFrame {
         leftSideBar.setLayout(leftSideBarLayout);
         leftSideBarLayout.setHorizontalGroup(
             leftSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
+            .addGroup(leftSideBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(menu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(153, Short.MAX_VALUE))
         );
         leftSideBarLayout.setVerticalGroup(
             leftSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 514, Short.MAX_VALUE)
+            .addGroup(leftSideBarLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(menu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(413, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
@@ -129,7 +139,7 @@ public class Index extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windown".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -155,9 +165,11 @@ public class Index extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelTop;
     private javax.swing.JPanel leftSideBar;
     private javax.swing.JPanel mainPanel;
+    private GiaodienUI.menu menu1;
     // End of variables declaration//GEN-END:variables
 }
