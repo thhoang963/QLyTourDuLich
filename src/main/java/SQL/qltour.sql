@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 15, 2023 lúc 05:03 PM
--- Phiên bản máy phục vụ: 10.4.27-MariaDB
--- Phiên bản PHP: 8.0.25
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -17,15 +8,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Cơ sở dữ liệu: `qltour`
---
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `taikhoan`
---
 
 CREATE TABLE `taikhoan` (
   `tentaikhoan` text NOT NULL,
@@ -34,9 +17,25 @@ CREATE TABLE `taikhoan` (
   `loaitk` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
---
--- Đang đổ dữ liệu cho bảng `taikhoan`
---
+CREATE TABLE `khachHang` (
+  `makh` int(11) NOT NULL PRIMARY KEY,
+  `tenkhachhang` text NOT NULL,
+  `diachi` text,
+  `sdt` int(10) NOT NULL,
+  `email` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+
+CREATE TABLE `nhanVien` (
+  `manv` int(11) NOT NULL PRIMARY KEY,
+  `tennhanvien` text NOT NULL,
+  `diachi` text,
+  `chucVu` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+
+CREATE TABLE `huongdanVien` (
+  `manv` int(11),
+  `matour` int(11)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
 INSERT INTO `taikhoan` (`tentaikhoan`, `matkhau`, `manv`, `loaitk`) VALUES
 ('admin', '123456', 1, 'admin');
