@@ -3,7 +3,6 @@ package DTo;
 import GiaodienUI.Test;
 import DTo.TaiKhoan;
 import GiaodienUI.TrangChu;
-import GiaodienUI.index;
 
 import GiaodienUI.login;
 
@@ -59,18 +58,18 @@ public class ModuleXuLy {
         
         
     }
-    public void chuyenFrameMenu(JFrame index,int flat)
+    /*public void chuyenFrameMenu(JFrame index,int flat)
     {
-        index.removeAll();
-        if (flat == 1) {
-            JPanel id = new index();
-            
-            index.add(id);
-        }
-        index.setVisible(true);    
-        
-        
+    index.removeAll();
+    if (flat == 1) {
+    JPanel id = new index();
+    
+    index.add(id);
     }
+    index.setVisible(true);
+    
+    
+    }*/
     
     public void mainFrame(JLabel F1, JLabel F2){
         JFrame main = new JFrame();

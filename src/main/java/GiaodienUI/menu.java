@@ -45,12 +45,15 @@ public class menu extends JComponent{
     
     private Icon getIcon(int index)
     {
-        URL url = getClass().getResource("/picture/icon/icon"+ index +".png");
+        URL url = getClass().getResource("./"+index +".png");
         if (url != null) {
             return new ImageIcon(url);
         }
         else
-        { return  null;}
+        { 
+            System.out.println("khong thay");
+            return  null;
+        }
     }
     
     private void addMenu (String menuName, int index) 
@@ -68,16 +71,16 @@ public class menu extends JComponent{
             
             public void actionPerformed(ActionEvent e) {
                 if (length > 1) {
-                    if(item.isSelected()== true){
+                    if(item.isSelected() == false) {                        
+                        addSubMenu(item,index, length, getComponentZOrder(item));
+                        item.setSelected(true);
+                        System.out.println("show "+item.isSelected());
+                    } 
+                    else{
                         hideMenu(item,index);
                         item.setSelected(false);
                         System.out.println("hide " +item.isSelected());                   
                     }
-                    if(item.isSelected() == false) {
-                        item.setSelected(true);
-                        addSubMenu(item,index, length, getComponentZOrder(item));
-                        System.out.println("show "+item.isSelected());
-                    }                        
                 }
             }
         });
