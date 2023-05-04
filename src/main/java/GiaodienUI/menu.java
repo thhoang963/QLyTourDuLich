@@ -4,10 +4,15 @@
  */
 package GiaodienUI;
 
+import java.awt.Color;
 import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.MenuItem;
+import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.geom.Rectangle2D;
 import java.net.URL;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -24,7 +29,7 @@ public class menu extends JComponent{
     private String [][]menuItems = new String[][]
     {
         {"Dashboard"},
-        {"Du_Lịch","Tour_Miền_Bắc","Tour_Miền_Trung","Tour_Miền_Tây_Nam_Bộ","Tour_Miền_Đông_Nam_Bộ"},
+        {"Du Lịch","Tour Miền Bắc","Tour Miền Trung","Tour Miền Tây Nam Bộ","Tour Miền Đông Nam Bộ"},
         {"Tab3"},
         {"Tab4"}
     };
@@ -36,7 +41,7 @@ public class menu extends JComponent{
     private void init() {
         layout = new MigLayout("wrap 1, fillx, gapy 0, inset 2","fill");
         setLayout(layout);
-        
+        setOpaque(true);
         for(int i= 0;i < menuItems.length; i++)
         {
             addMenu(menuItems[i][0], i) ;   
@@ -45,7 +50,7 @@ public class menu extends JComponent{
     
     private Icon getIcon(int index)
     {
-        URL url = getClass().getResource("./"+index +".png");
+        URL url = getClass().getResource("/image/icon/"+index +".png");
         if (url != null) {
             return new ImageIcon(url);
         }
@@ -114,4 +119,13 @@ public class menu extends JComponent{
             }            
         }
      }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g.create();
+        g2.setColor(new Color(21,110,71));
+        g2.fill(new Rectangle2D.Double(0, 0, getWidth(), getHeight()));
+        super.paintComponent(g); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+    
 }
