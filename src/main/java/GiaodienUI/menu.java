@@ -65,21 +65,23 @@ public class menu extends JComponent{
         
         item.addActionListener(new ActionListener() {
             @Override
+            
             public void actionPerformed(ActionEvent e) {
                 if (length > 1) {
-                    if (!item.isSelected()) {
-                        item.setSelected(true);
-                        addSubMenu(item,index, length, getComponentZOrder(item));
-                    }
-                    else {
+                    if(item.isSelected()== true){
                         hideMenu(item,index);
                         item.setSelected(false);
+                        System.out.println("hide " +item.isSelected());                   
                     }
-                        
+                    if(item.isSelected() == false) {
+                        item.setSelected(true);
+                        addSubMenu(item,index, length, getComponentZOrder(item));
+                        System.out.println("show "+item.isSelected());
+                    }                        
                 }
             }
         });
-        add (item) ;
+        add (item);
         revalidate();
         repaint();
     }
@@ -95,18 +97,18 @@ public class menu extends JComponent{
             panel.add (subitem) ;
         }
         add (panel,"h 0!",indexZ+1) ;
-        revalidate ( ) ;
-        repaint () ;
+        revalidate();
+        repaint();
         MenuAnimation.showMenu(panel, item, layout, true);
     }
     
     private void hideMenu(menuItem item, int index) {
         for(Component com:getComponents()) {
-            if(com instanceof JPanel&&com.getName()!= null&&com.getName().equals( index+"")) {
+            if(com instanceof JPanel&&com.getName() != null&&com.getName().equals( index+"")) {
                 com.setName(null) ;
-                MenuAnimation.showMenu(com, item, layout, true);
-                break;
-            }
+                MenuAnimation.showMenu(com, item, layout, false);     
+                break;                
+            }            
         }
      }
 }

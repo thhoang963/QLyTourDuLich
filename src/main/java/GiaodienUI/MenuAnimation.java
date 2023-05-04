@@ -15,7 +15,7 @@ public class MenuAnimation {
         Animator animator = new Animator (300, new TimingTargetAdapter(){
             @Override
             public void timingEvent (float fraction) {
-                float f = show ? fraction : 1f - fraction;
+                float f = show?fraction:1f-fraction;
                 layout.setComponentConstraints(component, "h "+ height * f + "!");
                 component.revalidate();
             }
@@ -23,7 +23,7 @@ public class MenuAnimation {
         animator.setResolution(0) ;
         animator.setAcceleration(.5f);
         animator.setDeceleration(.5f);
-        animator. start ( ) ;
+        animator.start();
 }
 
 
