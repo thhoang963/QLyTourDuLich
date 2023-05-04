@@ -551,11 +551,11 @@ public class QlyVeTour extends javax.swing.JPanel {
 
             },
             new String [] {
-                "STT", "Tên Tour", "Mã Tour", "Loại Tour", "Tổng Số Chỗ", "Số Chỗ Dư", "Địa Điểm Tour", "Địa Điểm Đi", "Địa Điểm Đến", "Số Ngày Đi", "Ngày Đi", "Ngày Về", "Giá Tour"
+                "Tên Tour", "Mã Tour", "Loại Tour", "Tổng Số Chỗ", "Số Chỗ Dư", "Địa Điểm Tour", "Địa Điểm Đi", "Địa Điểm Đến", "Số Ngày Đi", "Ngày Đi", "Ngày Về", "Giá Tour"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Long.class, java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.Long.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Long.class, java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.Long.class
             };
 
             public Class getColumnClass(int columnIndex) {

@@ -358,11 +358,7 @@ public class QlyKhachHang extends javax.swing.JPanel {
         jTable1.setBackground(new java.awt.Color(204, 204, 204));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "Họ và Tên", "Mã Khách Hàng", "Địa Chỉ", "Số Điện Thoại", "Email"
@@ -443,6 +439,27 @@ String diaChi = txtDiaChi.getText();
 String soDienThoai = txtSoDienThoai.getText();
 String email = txtEmail.getText();
 
+if(tenKH.equals("")){
+    JOptionPane.showMessageDialog(null, "Nhập Đầy Đủ Thông Tin");
+
+}
+else if(maKH.equals("")){
+    JOptionPane.showMessageDialog(null, "Nhập Đầy Đủ Thông Tin");
+
+}
+else if(diaChi.equals("")){
+    JOptionPane.showMessageDialog(null, "Nhập Đầy Đủ Thông Tin");
+
+}
+else if(soDienThoai.equals("")){
+    JOptionPane.showMessageDialog(null, "Nhập Đầy Đủ Thông Tin");
+
+}
+else if(email.equals("")){
+    JOptionPane.showMessageDialog(null, "Nhập Đầy Đủ Thông Tin");
+
+}
+else{
 // tạo đối tượng KhachHang mới với thông tin lấy được
 
 
@@ -460,8 +477,13 @@ model.addRow(new Object[]{kh.getTenkh(),kh.getMakh(), kh.getDiachi(), kh.getSdt(
 jTable1.setModel(model);
 
 // thông báo thành công
-JOptionPane.showMessageDialog(null, "Thêm khách hàng thành công");
-
+JOptionPane.showMessageDialog(null, "Thêm Khách Hàng Thành Công");
+txtHoTen.setText("");
+txtMaKhachHang.setText("");
+txtDiaChi.setText("");
+txtSoDienThoai.setText("");
+txtEmail.setText("");
+    }
     }//GEN-LAST:event_btnThemActionPerformed
 
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
@@ -471,7 +493,7 @@ int selectedRow = jTable1.getSelectedRow();
 
 // nếu không có hàng nào được chọn, thông báo lỗi và kết thúc
 if (selectedRow == -1) {
-    JOptionPane.showMessageDialog(null, "Vui lòng chọn một hàng để xóa");
+    JOptionPane.showMessageDialog(null, "Vui Lòng Chọn Một Hàng Để Xóa");
     return;
 }
 
@@ -493,7 +515,7 @@ for (KhachHang kh : danhSach) {
 
 // nếu không tìm thấy khách hàng, thông báo lỗi và kết thúc
 if (khachHangCanXoa == null) {
-    JOptionPane.showMessageDialog(null, "Khách hàng không tồn tại");
+    JOptionPane.showMessageDialog(null, "Khách Hàng Không Tồn Tại");
     return;
 }
 
@@ -507,7 +529,7 @@ model.removeRow(selectedRow);
 jTable1.setModel(model);
 
 // thông báo thành công
-JOptionPane.showMessageDialog(null, "Xóa khách hàng thành công");
+JOptionPane.showMessageDialog(null, "Xóa Khách Hàng Thành Công");
 
     }//GEN-LAST:event_btnXoaActionPerformed
        
@@ -517,7 +539,7 @@ int selectedRow = jTable1.getSelectedRow();
 
 // nếu không có hàng nào được chọn, thông báo lỗi và kết thúc
 if (selectedRow == -1) {
-    JOptionPane.showMessageDialog(null, "Vui lòng chọn một hàng để sửa");
+    JOptionPane.showMessageDialog(null, "Vui Lòng Chọn Một Hàng Để Sửa");
     return;
 }
 
@@ -538,7 +560,7 @@ for (KhachHang kh : danhSach) {
 
 // nếu không tìm thấy khách hàng, thông báo lỗi và kết thúc
 if (khachHangCanSua == null) {
-    JOptionPane.showMessageDialog(null, "Khách hàng không tồn tại");
+    JOptionPane.showMessageDialog(null, "Khách Hàng Không Tồn Tại");
     return;
 }
 
@@ -565,7 +587,7 @@ model.setValueAt(email, selectedRow, 4);
 
 
 // thông báo thành công
-JOptionPane.showMessageDialog(null, "Sửa thông tin khách hàng thành công");
+JOptionPane.showMessageDialog(null, "Sửa Thông Tin Khách Hàng Thành Công");
 
     }//GEN-LAST:event_btnSuaActionPerformed
     
@@ -584,10 +606,10 @@ JOptionPane.showMessageDialog(null, "Sửa thông tin khách hàng thành công"
     
     // Tạo một model mới để hiển thị kết quả tìm kiếm trên JTable
     DefaultTableModel model = new DefaultTableModel();
-    model.addColumn("Tên khách hàng");
-    model.addColumn("Mã khách hàng");
-    model.addColumn("Địa chỉ");
-    model.addColumn("Số điện thoại");
+    model.addColumn("Họ và Tên");
+    model.addColumn("Mã Khách Hàng");
+    model.addColumn("Địa Chỉ");
+    model.addColumn("Số Điện Thoại");
     model.addColumn("Email");
     
     // Thêm các khách hàng tìm được vào model

@@ -124,7 +124,7 @@ public class QlyNhanVien extends javax.swing.JPanel {
         jLabel5.setText(" Loại Nhân Viên");
         jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxLoaiNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại Nhân Viên", "Nhân viên", "khách hàng", " " }));
+        cbxLoaiNhanVien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Loại Nhân Viên", "Nhân Viên Bán Hàng", "Quản Lý Kho", "Nhân Viên Văn Phòng", " " }));
         cbxLoaiNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxLoaiNhanVienActionPerformed(evt);
@@ -137,7 +137,7 @@ public class QlyNhanVien extends javax.swing.JPanel {
         jLabel6.setText("       Chức Vụ");
         jLabel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chức Vụ", "nhân viên", "khách hàng", "quản lý", " " }));
+        cbxChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chức Vụ", "Nhân Viên", "Quản Lý", " " }));
         cbxChucVu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxChucVuActionPerformed(evt);
@@ -268,11 +268,7 @@ public class QlyNhanVien extends javax.swing.JPanel {
         jTable1.setBackground(new java.awt.Color(204, 204, 204));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "Họ và Tên", "Mã Nhân Viên", "Địa Chỉ", "Loại Nhân Viên", "Chức Vụ"
@@ -346,7 +342,23 @@ public class QlyNhanVien extends javax.swing.JPanel {
     String diaChi = txtDiaChi.getText();
     String loaiNV = cbxLoaiNhanVien.getSelectedItem().toString();
     String chucVu = cbxChucVu.getSelectedItem().toString();
-
+    
+if(maNV.equals("")){
+    JOptionPane.showMessageDialog(null, "Nhập Đầy Đủ Thông Tin");
+}
+else if(hoTen.equals("")){
+    JOptionPane.showMessageDialog(null, "Nhập Đầy Đủ Thông Tin");
+}
+else if(diaChi.equals("")){
+    JOptionPane.showMessageDialog(null, "Nhập Đầy Đủ Thông Tin");
+}
+else if(loaiNV.equals("Loại Nhân Viên")){
+    JOptionPane.showMessageDialog(null, "Chọn Thông Tin Cụ Thể");
+}
+else if(chucVu.equals("Chức Vụ")){
+    JOptionPane.showMessageDialog(null, "Chọn Thông Tin Cụ Thể");
+}
+else{
     // Tạo đối tượng DTO
     NhanVien nv = new NhanVien(hoTen,maNV, diaChi, loaiNV, chucVu);
 
@@ -363,7 +375,11 @@ model.addRow(new Object[]{nv.getTennv(),nv.getManv(), nv.getDiachi(), nv.getLoai
 jTable1.setModel(model);
 
 // thông báo thành công
-JOptionPane.showMessageDialog(null, "Thêm nhân viên thành công");
+JOptionPane.showMessageDialog(null, "Thêm Nhân Viên Thành Công");
+txtMaNhanVien.setText("");
+txtHoTen.setText("");
+txtDiaChi.setText("");
+}
 
     }//GEN-LAST:event_btnThemActionPerformed
 
@@ -373,7 +389,7 @@ int selectedRow = jTable1.getSelectedRow();
 
 // nếu không có hàng nào được chọn, thông báo lỗi và kết thúc
 if (selectedRow == -1) {
-    JOptionPane.showMessageDialog(null, "Vui lòng chọn một hàng để xóa");
+    JOptionPane.showMessageDialog(null, "Vui Lòng Chọn Một Hàng Để Xóa");
     return;
 }
 
@@ -385,22 +401,22 @@ String maNV = (String) model.getValueAt(selectedRow, 1);
 
 
 // tìm khách hàng trong danh sách dựa vào mã
-NhanVien khachHangCanXoa = null;
+NhanVien nhanVienCanXoa = null;
 for (NhanVien nv : danhSachNV) {
     if (nv.getManv().equals(maNV)) {
-        khachHangCanXoa = nv;
+        nhanVienCanXoa = nv;
         break;
     }
 }
 
 // nếu không tìm thấy khách hàng, thông báo lỗi và kết thúc
-if (khachHangCanXoa == null) {
-    JOptionPane.showMessageDialog(null, "Khách hàng không tồn tại");
+if (nhanVienCanXoa == null) {
+    JOptionPane.showMessageDialog(null, "Nhân Viên Không Tồn Tại");
     return;
 }
 
 // xóa khách hàng khỏi danh sách
-danhSachNV.remove(khachHangCanXoa);
+danhSachNV.remove(nhanVienCanXoa);
 
 // xóa hàng được chọn trong model
 model.removeRow(selectedRow);
@@ -409,7 +425,7 @@ model.removeRow(selectedRow);
 jTable1.setModel(model);
 
 // thông báo thành công
-JOptionPane.showMessageDialog(null, "Xóa nhân viên thành công");
+JOptionPane.showMessageDialog(null, "Xóa Nhân Viên Thành Công");
 
     }//GEN-LAST:event_btnXoaActionPerformed
 
@@ -419,7 +435,7 @@ int selectedRow = jTable1.getSelectedRow();
 
 // nếu không có hàng nào được chọn, thông báo lỗi và kết thúc
 if (selectedRow == -1) {
-    JOptionPane.showMessageDialog(null, "Vui lòng chọn một hàng để sửa");
+    JOptionPane.showMessageDialog(null, "Vui Lòng Chọn Một Hàng Để Sửa");
     return;
 }
 
@@ -430,49 +446,49 @@ DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
 String maNV = (String) model.getValueAt(selectedRow, 1);
 
 // tìm khách hàng trong danh sách dựa vào mã
-NhanVien khachHangCanSua = null;
-for (NhanVien kh : danhSachNV) {
-    if (kh.getManv().equals(maNV)) {
-        khachHangCanSua = kh;
+NhanVien nhanVienCanSua = null;
+for (NhanVien nv : danhSachNV) {
+    if (nv.getManv().equals(maNV)) {
+        nhanVienCanSua = nv;
         break;
     }
 }
 
 // nếu không tìm thấy khách hàng, thông báo lỗi và kết thúc
-if (khachHangCanSua == null) {
-    JOptionPane.showMessageDialog(null, "Nhân viên không tồn tại");
+if (nhanVienCanSua == null) {
+    JOptionPane.showMessageDialog(null, "Nhân Viên Không Tồn Tại");
     return;
 }
 
 // hiển thị form sửa thông tin khách hàng
-String tenNV = JOptionPane.showInputDialog(null, "Nhập tên nhân viên", khachHangCanSua.getTennv());
+String tenNV = JOptionPane.showInputDialog(null, "Nhập tên nhân viên", nhanVienCanSua.getTennv());
 String maNVNew = JOptionPane.showInputDialog(null, "Nhập mã nhân viên", maNV);
-String diaChi = JOptionPane.showInputDialog(null, "Nhập địa chỉ", khachHangCanSua.getDiachi());
+String diaChi = JOptionPane.showInputDialog(null, "Nhập địa chỉ", nhanVienCanSua.getDiachi());
 // thêm ComboBox để chọn loại nhân viên
 JComboBox<String> cbxLoaiNhanVien = new JComboBox<>();
-cbxLoaiNhanVien.addItem("Nhân viên bán hàng");
-cbxLoaiNhanVien.addItem("Quản lý kho");
-cbxLoaiNhanVien.addItem("Nhân viên văn phòng");
-cbxLoaiNhanVien.setSelectedItem(khachHangCanSua.getLoainv());
+cbxLoaiNhanVien.addItem("Nhân Viên Bán Hàng");
+cbxLoaiNhanVien.addItem("Quản Lý Kho");
+cbxLoaiNhanVien.addItem("Nhân Viên Văn Phòng");
+cbxLoaiNhanVien.setSelectedItem(nhanVienCanSua.getLoainv());
 JOptionPane.showMessageDialog(null, cbxLoaiNhanVien, "Chọn loại nhân viên", JOptionPane.QUESTION_MESSAGE);
 
 String loainv = (String) cbxLoaiNhanVien.getSelectedItem();
 // thêm ComboBox để chọn chức vụ
 JComboBox<String> cbxChucVu = new JComboBox<>();
-cbxChucVu.addItem("Nhân viên");
-cbxChucVu.addItem("Quản lý");
-cbxChucVu.setSelectedItem(khachHangCanSua.getChucvu());
+cbxChucVu.addItem("Nhân Viên");
+cbxChucVu.addItem("Quản Lý");
+cbxChucVu.setSelectedItem(nhanVienCanSua.getChucvu());
 JOptionPane.showMessageDialog(null, cbxChucVu, "Chọn chức vụ", JOptionPane.QUESTION_MESSAGE);
 
 String chucvu = (String) cbxChucVu.getSelectedItem();
 
 
 // cập nhật thông tin khách hàng
-khachHangCanSua.setTennv(tenNV);
-khachHangCanSua.setManv(maNVNew);
-khachHangCanSua.setDiachi(diaChi);
-khachHangCanSua.setLoainv(loainv);
-khachHangCanSua.setChucvu(chucvu);
+nhanVienCanSua.setTennv(tenNV);
+nhanVienCanSua.setManv(maNVNew);
+nhanVienCanSua.setDiachi(diaChi);
+nhanVienCanSua.setLoainv(loainv);
+nhanVienCanSua.setChucvu(chucvu);
 
 // cập nhật lại model cho JTable
 model.setValueAt(tenNV, selectedRow, 0);
@@ -483,34 +499,34 @@ model.setValueAt(chucvu, selectedRow, 4);
 
 
 // thông báo thành công
-JOptionPane.showMessageDialog(null, "Sửa thông tin nhân viên thành công");
+JOptionPane.showMessageDialog(null, "Sửa Thông Tin Nhân Viên Thành Công");
 
     }//GEN-LAST:event_btnSuaActionPerformed
 
     private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
-        String tenKHCanTim = txtMaNhanVien.getText();
+        String tenNVCanTim = txtMaNhanVien.getText();
     
     // Tạo một danh sách để lưu khách hàng tìm được
     ArrayList<NhanVien> ketQuaTimKiem = new ArrayList<>();
     
     // Lặp qua danh sách khách hàng hiện tại để tìm kiếm
-    for (NhanVien kh : danhSachNV) {
-        if (kh.getManv().toLowerCase().contains(tenKHCanTim.toLowerCase())) {
-            ketQuaTimKiem.add(kh);
+    for (NhanVien nv : danhSachNV) {
+        if (nv.getManv().toLowerCase().contains(tenNVCanTim.toLowerCase())) {
+            ketQuaTimKiem.add(nv);
         }
     }
     
     // Tạo một model mới để hiển thị kết quả tìm kiếm trên JTable
     DefaultTableModel model = new DefaultTableModel();
-    model.addColumn("Họ và tên");
-    model.addColumn("Mã nhân viên");
-    model.addColumn("Địa chỉ");
-    model.addColumn("Loại nhân viên");
-    model.addColumn("Chức vụ");
+    model.addColumn("Họ và Tên");
+    model.addColumn("Mã Nhân Viên");
+    model.addColumn("Địa Chỉ");
+    model.addColumn("Loại Nhân Viên");
+    model.addColumn("Chức Vụ");
     
     // Thêm các khách hàng tìm được vào model
-    for (NhanVien kh : ketQuaTimKiem) {
-        model.addRow(new Object[]{kh.getTennv(), kh.getManv(), kh.getDiachi(), kh.getLoainv(), kh.getChucvu()});
+    for (NhanVien nv : ketQuaTimKiem) {
+        model.addRow(new Object[]{nv.getTennv(), nv.getManv(), nv.getDiachi(), nv.getLoainv(), nv.getChucvu()});
     }
     
     // Cập nhật lại model cho JTable
