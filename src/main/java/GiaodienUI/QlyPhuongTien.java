@@ -4,12 +4,19 @@
  */
 package GiaodienUI;
 
+import javax.swing.JOptionPane;
+import javax.swing.JComboBox;
+import DTo.PhuongTien;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Thanh Tran
  */
 public class QlyPhuongTien extends javax.swing.JPanel {
 
+    ArrayList<PhuongTien> danhSachPT = new ArrayList<PhuongTien>();
     /**
      * Creates new form QlyPhuongTien
      */
@@ -80,7 +87,7 @@ public class QlyPhuongTien extends javax.swing.JPanel {
         jLabel4.setText("  Loại Phương Tiện ");
         jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cbxLoaiPhuongTien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chọn Loại Phương Tiện" }));
+        cbxLoaiPhuongTien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chọn Loại Phương Tiện", "Xe Bus", "Máy Bay", "Xe Lửa", "Thuyền", " " }));
         cbxLoaiPhuongTien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxLoaiPhuongTienActionPerformed(evt);
@@ -219,7 +226,7 @@ public class QlyPhuongTien extends javax.swing.JPanel {
                                         .addGap(52, 52, 52)
                                         .addComponent(btnTimKiem)
                                         .addGap(31, 31, 31)))))))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -299,8 +306,7 @@ public class QlyPhuongTien extends javax.swing.JPanel {
                 .addGap(24, 24, 24)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -325,19 +331,173 @@ public class QlyPhuongTien extends javax.swing.JPanel {
     }//GEN-LAST:event_txtSoChoDuActionPerformed
 
     private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
-        // TODO add your handling code here:
+String loaiPT = cbxLoaiPhuongTien.getSelectedItem().toString();   
+String tenPT = txtTenPhuongTien.getText();
+String maPT = txtMaPhuongTien.getText();
+String tongsocho = txtTongSoCho.getText();
+String sochodu = txtSoChoDu.getText();
+
+if(loaiPT.equals("Chọn Loại Phương Tiện")){
+    JOptionPane.showMessageDialog(null,"Chọn Thông Tin Cụ Thể");
+}
+else if(tenPT.equals("")){
+    JOptionPane.showMessageDialog(null,"Nhập Đầy Đủ Thông Tin");
+}
+else if(maPT.equals("")){
+    JOptionPane.showMessageDialog(null,"Nhập Đầy Đủ Thông Tin");
+}
+else if(tongsocho.equals("")){
+    JOptionPane.showMessageDialog(null,"Nhập Đầy Đủ Thông Tin");
+}
+else if(sochodu.equals("")){
+    JOptionPane.showMessageDialog(null,"Nhập Đầy Đủ Thông Tin");
+}
+else {
+    long tongSoCho = Long.parseLong(tongsocho);
+long soChoDu = Long.parseLong(sochodu);
+    PhuongTien pt = new PhuongTien(maPT, loaiPT, tenPT, tongSoCho, soChoDu);
+    
+    danhSachPT.add(pt);   
+    
+    DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+    
+    model.addRow(new Object[]{pt.getBienso(), pt.getLoaipt(), pt.getMapt(), pt.getTongsocho(), pt.getSochocondu()});
+    
+    jTable1.setModel(model);
+    
+    JOptionPane.showMessageDialog(null, "Thêm Phương Tiện Thành Công");
+   
+    txtTenPhuongTien.setText("");
+    txtMaPhuongTien.setText("");
+    txtTongSoCho.setText("");
+    txtSoChoDu.setText("");
+
+}
+// TODO add your handling code here:
     }//GEN-LAST:event_btnThemActionPerformed
 
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
-        // TODO add your handling code here:
+        int selectedRow = jTable1.getSelectedRow();
+        
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        
+        if(selectedRow == -1){
+            JOptionPane.showMessageDialog(null,"Vui Lòng Chọn Một Hàng Để Xóa");
+            return;
+        }
+        
+        String maPT = (String) model.getValueAt(selectedRow,2);
+        
+        PhuongTien phuongTienCanXoa = null;
+        for(PhuongTien pt : danhSachPT){
+            if(pt.getMapt().equals(maPT)){
+                phuongTienCanXoa = pt;
+                break;
+            }
+        }
+        
+        danhSachPT.remove(phuongTienCanXoa);
+        model.removeRow(selectedRow);
+        jTable1.setModel(model);
+        
+        JOptionPane.showMessageDialog(null, "Xóa Phương Tiện Thành Công");
+        
+        if(phuongTienCanXoa == null){
+                    JOptionPane.showMessageDialog(null, "Phương Tiện Không Tồn Tại");
+                    return;
+
+        }
+   
+// TODO add your handling code here:
     }//GEN-LAST:event_btnXoaActionPerformed
 
     private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
+       int selectedRow = jTable1.getSelectedRow();
+      
+       if(selectedRow == -1){
+           JOptionPane.showMessageDialog(null, "Vui Lòng Chọn Một Hàng Để Sửa");
+                    return;
+       }
+       
+       DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+       
+       String maPT = (String) model.getValueAt(selectedRow, 2);
+       PhuongTien phuongTienCanSua = null;
+       for(PhuongTien pt : danhSachPT){
+           if(pt.getMapt().equals(maPT)){
+               phuongTienCanSua = pt;
+               break;
+           }
+       }
+       
+       if(phuongTienCanSua == null){
+                      JOptionPane.showMessageDialog(null, "Phương Tiện Không Tồn Tại");
+            return;
+       }
+       
+       JComboBox<String> cbxLoaiPhuongTien = new JComboBox<>();
+       cbxLoaiPhuongTien.addItem("Xe Bus");
+              cbxLoaiPhuongTien.addItem("Máy Bay");
+       cbxLoaiPhuongTien.addItem("Xe Lửa");
+       cbxLoaiPhuongTien.addItem("Thuyền");
+       cbxLoaiPhuongTien.setSelectedItem(phuongTienCanSua.getLoaipt());
+       JOptionPane.showMessageDialog(null, cbxLoaiPhuongTien, "Chọn loại phương tiện", JOptionPane.QUESTION_MESSAGE);
+
+       String loaipt = (String) cbxLoaiPhuongTien.getSelectedItem();
+       
+              String tenpt = JOptionPane.showInputDialog(null, "nhập tên phương tiện", phuongTienCanSua.getBienso());
+       String mapt = JOptionPane.showInputDialog(null, "nhập mã phương tiện", phuongTienCanSua.getMapt());
+        String tongsocho = JOptionPane.showInputDialog(null, "nhập tổng số chỗ", phuongTienCanSua.getTongsocho());
+        String sochodu = JOptionPane.showInputDialog(null, "nhập số chỗ còn dư", phuongTienCanSua.getSochocondu());
+
+       
+       phuongTienCanSua.setLoaipt(loaipt);
+       phuongTienCanSua.setBienso(tenpt);
+       phuongTienCanSua.setMapt(mapt);
+       long tongSoCho = Long.parseLong(tongsocho);
+              long soChoDu = Long.parseLong(sochodu);
+       phuongTienCanSua.setTongsocho(tongSoCho);
+       phuongTienCanSua.setSochocondu(soChoDu);
+       
+       model.setValueAt(loaipt, selectedRow,1 );
+       model.setValueAt(tenpt,selectedRow,0);
+       model.setValueAt(mapt, selectedRow,2);
+       model.setValueAt(tongSoCho, selectedRow, 3);
+              model.setValueAt(soChoDu, selectedRow, 4);
+
+       JOptionPane.showMessageDialog(null, "Sửa Thông Tin Phương Tiện Thành Công");
+
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSuaActionPerformed
 
     private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
-        // TODO add your handling code here:
+        String maPTCanTim = txtMaPhuongTien.getText();
+        
+        ArrayList<PhuongTien> ketQuaTimKiem = new ArrayList<>();
+        
+        for(PhuongTien pt : danhSachPT){
+            if(pt.getMapt().toLowerCase().contains(maPTCanTim.toLowerCase())){
+                ketQuaTimKiem.add(pt);
+            }
+            else{
+                      JOptionPane.showMessageDialog(null, "Kết Quả Không Tìm Thấy");
+            return;
+            }
+        }
+        
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Tên Phương Tiện");
+                model.addColumn("Loại Phương Tiện");
+        model.addColumn("Mã Phương Tiện");
+        model.addColumn("Tổng Số Chỗ");
+        model.addColumn("Số Chỗ Dư");
+        
+        for(PhuongTien pt : ketQuaTimKiem){
+            model.addRow(new Object[]{pt.getBienso(), pt.getLoaipt(), pt.getMapt(), pt.getTongsocho(), pt.getSochocondu()});
+        }
+        
+        jTable1.setModel(model);
+// TODO add your handling code here:
     }//GEN-LAST:event_btnTimKiemActionPerformed
 
 

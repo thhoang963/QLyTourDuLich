@@ -601,7 +601,10 @@ JOptionPane.showMessageDialog(null, "Sửa Thông Tin Khách Hàng Thành Công"
     for (KhachHang kh : danhSach) {
         if (kh.getMakh().toLowerCase().contains(tenKHCanTim.toLowerCase())) {
             ketQuaTimKiem.add(kh);
-        }
+        }else{
+                      JOptionPane.showMessageDialog(null, "Kết Quả Không Tìm Thấy");
+            return;
+            }
     }
     
     // Tạo một model mới để hiển thị kết quả tìm kiếm trên JTable

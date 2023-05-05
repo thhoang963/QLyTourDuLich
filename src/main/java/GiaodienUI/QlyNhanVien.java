@@ -504,16 +504,19 @@ JOptionPane.showMessageDialog(null, "Sửa Thông Tin Nhân Viên Thành Công")
     }//GEN-LAST:event_btnSuaActionPerformed
 
     private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
-        String tenNVCanTim = txtMaNhanVien.getText();
+        String maNVCanTim = txtMaNhanVien.getText();
     
     // Tạo một danh sách để lưu khách hàng tìm được
     ArrayList<NhanVien> ketQuaTimKiem = new ArrayList<>();
     
     // Lặp qua danh sách khách hàng hiện tại để tìm kiếm
     for (NhanVien nv : danhSachNV) {
-        if (nv.getManv().toLowerCase().contains(tenNVCanTim.toLowerCase())) {
+        if (nv.getManv().toLowerCase().contains(maNVCanTim.toLowerCase())) {
             ketQuaTimKiem.add(nv);
-        }
+        }else{
+                      JOptionPane.showMessageDialog(null, "Kết Quả Không Tìm Thấy");
+            return;
+            }
     }
     
     // Tạo một model mới để hiển thị kết quả tìm kiếm trên JTable

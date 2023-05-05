@@ -8,12 +8,12 @@ package GiaodienUI;
  *
  * @author Thanh Tran
  */
-public class ThongKe extends javax.swing.JPanel {
+public class QlyThongKeTheoNgay extends javax.swing.JPanel {
 
     /**
      * Creates new form ThongKe
      */
-    public ThongKe() {
+    public QlyThongKeTheoNgay() {
         initComponents();
     }
 
@@ -46,7 +46,7 @@ public class ThongKe extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setText("                                  Thống Kê Doanh Thu");
+        jLabel1.setText("                         Thống Kê Doanh Thu Theo Ngày");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
