@@ -29,7 +29,7 @@ public class thu {
                 System.out.println("Nhap ma khach hang: "); String makhachhang = sc.nextLine();
                 System.out.println("Nhap ten khach hang: "); String tenkhachhang = sc.nextLine();
                 System.out.println("Nhap dia chi: "); String diachi = sc.nextLine();
-                System.out.println("Nhap so dien thoai: "); long sodienthoai = sc.nextLong();
+                System.out.println("Nhap so dien thoai: "); String sodienthoai = sc.nextLine();
                 System.out.println("Nhap email: "); String email = sc.nextLine();
                 sc.nextLine();
                 KhachHang kh = new KhachHang(makhachhang, tenkhachhang, diachi, sodienthoai,email);
