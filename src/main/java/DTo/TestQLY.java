@@ -4,6 +4,7 @@
  */
 package DTo;
 
+import GiaodienUI.BookVeTour;
 import GiaodienUI.QlyDiaDiemTour;
 import GiaodienUI.QlyDiaDiemVuiChoi;
 import GiaodienUI.QlyHoaDon;
@@ -25,9 +26,9 @@ public class TestQLY {
     public static void main(String[] args) {
         // Sử dụng bố cục mặc định của FlowLayout
 JFrame js = new JFrame();
-js.setTitle("Quản lý khách hàng");
-QlyPhuongTien qlpt = new QlyPhuongTien();
-js.add(qlpt);
+js.setTitle("khQuản lý khách hàng");
+QlyVeTour ql = new QlyVeTour();
+js.add(ql);
 js.setLocation(100, 100); // đặt vị trí
 js.setSize(750, 600); // đặt kích thước
 js.setVisible(true);
